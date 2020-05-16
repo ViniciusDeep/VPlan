@@ -14,7 +14,7 @@ protocol Coordinator {
 
 struct AppCoordinator: Coordinator {
     let window: UIWindow
-    
+
     init(window: UIWindow) {
         self.window = window
     }
