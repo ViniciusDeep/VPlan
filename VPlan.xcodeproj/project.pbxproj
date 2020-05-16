@@ -8,14 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		73329B59ECB8A050FAEEC189 /* Pods_VPlanTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3B79CBB40D42E253A57506E /* Pods_VPlanTests.framework */; };
+		8152DE0724704F6D00BF85B2 /* InteractionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8152DE0624704F6D00BF85B2 /* InteractionButton.swift */; };
 		81A28E6C2470331C00975F8C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A28E6B2470331C00975F8C /* AppDelegate.swift */; };
 		81A28E6E2470331C00975F8C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A28E6D2470331C00975F8C /* SceneDelegate.swift */; };
 		81A28E752470332100975F8C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81A28E742470332100975F8C /* Assets.xcassets */; };
 		81A28E782470332100975F8C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81A28E762470332100975F8C /* LaunchScreen.storyboard */; };
 		81A28E832470332100975F8C /* VPlanTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A28E822470332100975F8C /* VPlanTests.swift */; };
 		81A28E922470349A00975F8C /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A28E912470349A00975F8C /* Coordinator.swift */; };
-		81A28E98247034EC00975F8C /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A28E97247034EC00975F8C /* LoginView.swift */; };
+		81A28E98247034EC00975F8C /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A28E97247034EC00975F8C /* WelcomeView.swift */; };
 		81A28E9A247039C200975F8C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 81A28E99247039C200975F8C /* GoogleService-Info.plist */; };
+		81F4657D247042B7000AA11E /* WelcomeContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F4657C247042B7000AA11E /* WelcomeContentView.swift */; };
+		81F465812470433E000AA11E /* Then.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F465802470433E000AA11E /* Then.swift */; };
+		81F465832470435A000AA11E /* ConfigurableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F465822470435A000AA11E /* ConfigurableView.swift */; };
 		8704338E11B2DB8CE8D038EA /* Pods_VPlan.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C369BFC7821149CE02C9EB9 /* Pods_VPlan.framework */; };
 /* End PBXBuildFile section */
 
@@ -32,6 +36,7 @@
 /* Begin PBXFileReference section */
 		2F8AA2A90617C9F4D75D4622 /* Pods-VPlanTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VPlanTests.release.xcconfig"; path = "Target Support Files/Pods-VPlanTests/Pods-VPlanTests.release.xcconfig"; sourceTree = "<group>"; };
 		31AE7B85D981BAAB16EA8751 /* Pods-VPlan.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VPlan.release.xcconfig"; path = "Target Support Files/Pods-VPlan/Pods-VPlan.release.xcconfig"; sourceTree = "<group>"; };
+		8152DE0624704F6D00BF85B2 /* InteractionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractionButton.swift; sourceTree = "<group>"; };
 		81A28E682470331C00975F8C /* VPlan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VPlan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		81A28E6B2470331C00975F8C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		81A28E6D2470331C00975F8C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -42,8 +47,11 @@
 		81A28E822470332100975F8C /* VPlanTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VPlanTests.swift; sourceTree = "<group>"; };
 		81A28E842470332100975F8C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		81A28E912470349A00975F8C /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
-		81A28E97247034EC00975F8C /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		81A28E97247034EC00975F8C /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
 		81A28E99247039C200975F8C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		81F4657C247042B7000AA11E /* WelcomeContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeContentView.swift; sourceTree = "<group>"; };
+		81F465802470433E000AA11E /* Then.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Then.swift; sourceTree = "<group>"; };
+		81F465822470435A000AA11E /* ConfigurableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurableView.swift; sourceTree = "<group>"; };
 		8373F2C311910EB551D42D55 /* Pods-VPlanTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VPlanTests.debug.xcconfig"; path = "Target Support Files/Pods-VPlanTests/Pods-VPlanTests.debug.xcconfig"; sourceTree = "<group>"; };
 		964366FA788567CDF7EB38BD /* Pods-VPlan.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VPlan.debug.xcconfig"; path = "Target Support Files/Pods-VPlan/Pods-VPlan.debug.xcconfig"; sourceTree = "<group>"; };
 		9C369BFC7821149CE02C9EB9 /* Pods_VPlan.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VPlan.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -70,6 +78,44 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8152DE0524704F4B00BF85B2 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				8152DE0624704F6D00BF85B2 /* InteractionButton.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		8152DE08247050E400BF85B2 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		8152DE09247050EB00BF85B2 /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				8152DE0B2470545B00BF85B2 /* ViewModel */,
+				8152DE0A2470545700BF85B2 /* View */,
+			);
+			path = Register;
+			sourceTree = "<group>";
+		};
+		8152DE0A2470545700BF85B2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8152DE0B2470545B00BF85B2 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		81A28E5F2470331C00975F8C = {
 			isa = PBXGroup;
 			children = (
@@ -94,6 +140,7 @@
 			isa = PBXGroup;
 			children = (
 				81A28E902470347500975F8C /* Coordinator */,
+				81F4657E2470430A000AA11E /* Common */,
 				81A28E93247034B600975F8C /* Scenes */,
 				81A28E8E247033E000975F8C /* SupportingFiles */,
 				81A28E8D247033A300975F8C /* Resources */,
@@ -141,24 +188,27 @@
 		81A28E93247034B600975F8C /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				81A28E94247034CB00975F8C /* Login */,
+				8152DE09247050EB00BF85B2 /* Register */,
+				8152DE08247050E400BF85B2 /* Login */,
+				81A28E94247034CB00975F8C /* Welcome */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
 		};
-		81A28E94247034CB00975F8C /* Login */ = {
+		81A28E94247034CB00975F8C /* Welcome */ = {
 			isa = PBXGroup;
 			children = (
 				81A28E96247034DA00975F8C /* ViewModel */,
 				81A28E95247034D600975F8C /* View */,
 			);
-			path = Login;
+			path = Welcome;
 			sourceTree = "<group>";
 		};
 		81A28E95247034D600975F8C /* View */ = {
 			isa = PBXGroup;
 			children = (
-				81A28E97247034EC00975F8C /* LoginView.swift */,
+				81F4657B2470426C000AA11E /* CustomView */,
+				81F4657A24704262000AA11E /* RootView */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -168,6 +218,40 @@
 			children = (
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		81F4657A24704262000AA11E /* RootView */ = {
+			isa = PBXGroup;
+			children = (
+				81A28E97247034EC00975F8C /* WelcomeView.swift */,
+			);
+			path = RootView;
+			sourceTree = "<group>";
+		};
+		81F4657B2470426C000AA11E /* CustomView */ = {
+			isa = PBXGroup;
+			children = (
+				81F4657C247042B7000AA11E /* WelcomeContentView.swift */,
+			);
+			path = CustomView;
+			sourceTree = "<group>";
+		};
+		81F4657E2470430A000AA11E /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				8152DE0524704F4B00BF85B2 /* Components */,
+				81F4657F24704319000AA11E /* UIView */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		81F4657F24704319000AA11E /* UIView */ = {
+			isa = PBXGroup;
+			children = (
+				81F465802470433E000AA11E /* Then.swift */,
+				81F465822470435A000AA11E /* ConfigurableView.swift */,
+			);
+			path = UIView;
 			sourceTree = "<group>";
 		};
 		E9C03F50A4AC2B82809B0350 /* Pods */ = {
@@ -379,7 +463,11 @@
 			files = (
 				81A28E6C2470331C00975F8C /* AppDelegate.swift in Sources */,
 				81A28E6E2470331C00975F8C /* SceneDelegate.swift in Sources */,
-				81A28E98247034EC00975F8C /* LoginView.swift in Sources */,
+				81A28E98247034EC00975F8C /* WelcomeView.swift in Sources */,
+				81F4657D247042B7000AA11E /* WelcomeContentView.swift in Sources */,
+				81F465832470435A000AA11E /* ConfigurableView.swift in Sources */,
+				81F465812470433E000AA11E /* Then.swift in Sources */,
+				8152DE0724704F6D00BF85B2 /* InteractionButton.swift in Sources */,
 				81A28E922470349A00975F8C /* Coordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
