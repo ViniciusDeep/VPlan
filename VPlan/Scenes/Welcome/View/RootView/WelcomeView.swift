@@ -42,7 +42,7 @@ class WelcomeView: UIViewController {
 extension Reactive where Base: WelcomeView {
     var moveToRegister: Binder<()> {
         return Binder(base) { (view, _) in
-            view.navigationController?.pushViewController(RegisterView(), animated: true)
+            view.navigationController?.pushViewController(RegisterView(viewModel: RegisterViewModel(firebaseService: FirebaseService())), animated: true)
         }
     }
     
