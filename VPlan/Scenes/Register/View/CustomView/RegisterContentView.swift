@@ -7,6 +7,8 @@
 //
 
 import SnapKit
+import RxCocoa
+import RxSwift
 
 class RegisterContentView: UIView, ConfigurableView {
    
@@ -19,7 +21,7 @@ class RegisterContentView: UIView, ConfigurableView {
     let emailField = InteractionTextField(title: "Seu e-mail:", placeHolder: "Ex: moreira@gmail.com").then {
         $0.textField.keyboardType = .emailAddress
     }
-    let passwordField = InteractionTextField(title: "Seu senha:", placeHolder: "").then {
+    let passwordField = InteractionTextField(title: "Sua senha", placeHolder: "No mínimo 8 caracteres").then {
         $0.textField.isSecureTextEntry = true
     }
     let registerButton = InteractionButton(backgroundColor: #colorLiteral(red: 0.03137254902, green: 0.3411764706, blue: 0.6705882353, alpha: 1), title: "Registrar", titleColor: .white)
@@ -73,6 +75,36 @@ class RegisterContentView: UIView, ConfigurableView {
             make.top.equalTo(passwordField.snp.bottom).offset(12)
             make.left.equalTo(snp.left).offset(12)
             make.right.equalTo(snp.right).offset(-12)
+        }
+    }
+    
+    func update(fieldType: FieldType) {
+        switch fieldType {
+        case .email:
+            self.disableButton()
+        case .password:
+            self.disableButton()
+        case .name:
+            self.disableButton()
+        case .none:
+            registerButton.backgroundColor = #colorLiteral(red: 0.03137254902, green: 0.3411764706, blue: 0.6705882353, alpha: 1)
+            registerButton.setTitleColor(.white, for: .normal)
+            registerButton.isEnabled = true
+        }
+    }
+    
+    func disableButton() {
+        registerButton.backgroundColor = .lightGray
+        registerButton.setTitleColor(.black, for: .normal)
+        registerButton.isEnabled = false
+    }
+    
+}
+
+extension Reactive where Base: RegisterContentView {
+    var validateField: Binder<(FieldType)> {
+        return Binder(base) { (view, fieldType) in
+            view.update(fieldType: fieldType)
         }
     }
 }
