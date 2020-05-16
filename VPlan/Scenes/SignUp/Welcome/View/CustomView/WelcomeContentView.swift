@@ -67,7 +67,7 @@ class WelcomeContentView: UIView, ConfigurableView {
         }
         
         forgotPassowrdLabel.snp.makeConstraints { (make) in
-                   make.bottom.equalTo(snp.bottom).offset(-15)
+                   make.bottom.equalTo(snp.bottomMargin).offset(-15)
                    make.centerX.equalTo(snp.centerX)
         }
     }

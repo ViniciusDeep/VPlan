@@ -8,6 +8,7 @@
 
 import RxSwift
 import RxCocoa
+import FirebaseAuth
 
 class WelcomeView: UIViewController {
     
@@ -42,19 +43,19 @@ class WelcomeView: UIViewController {
 extension Reactive where Base: WelcomeView {
     var moveToRegister: Binder<()> {
         return Binder(base) { (view, _) in
-            view.navigationController?.pushViewController(UIViewController(), animated: true)
+            view.navigationController?.pushViewController(RegisterView(viewModel: RegisterViewModel(firebaseService: FirebaseService())), animated: true)
         }
     }
     
     var moveToSignIn: Binder<()> {
         return Binder(base) { (view, _) in
-            view.navigationController?.pushViewController(UIViewController(), animated: true)
+            view.navigationController?.pushViewController(LoginView(viewModel: LoginViewModel(firebaseService: FirebaseService())), animated: true)
         }
     }
     
     var moveToResetPassword: Binder<()> {
         return Binder(base) { (view, _) in
-            view.navigationController?.pushViewController(UIViewController(), animated: true)
+            view.navigationController?.pushViewController(ForgotPasswordView(viewModel: ForgotPasswordViewModel(firebaseService: FirebaseService())), animated: true)
         }
     }
 }

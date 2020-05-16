@@ -7,6 +7,10 @@ target 'VPlan' do
 
   # Pods for VPlan
     pod 'Firebase/Analytics'
+    pod 'Firebase/Auth'
+    pod 'Firebase/Core'
+    pod 'Firebase/Firestore'
+    pod 'FirebaseFirestoreSwift'
     pod 'SnapKit'
     pod 'RxSwift'
     pod 'RxCocoa'
