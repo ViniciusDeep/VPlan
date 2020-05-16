@@ -86,6 +86,36 @@
 			path = Components;
 			sourceTree = "<group>";
 		};
+		8152DE08247050E400BF85B2 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		8152DE09247050EB00BF85B2 /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				8152DE0B2470545B00BF85B2 /* ViewModel */,
+				8152DE0A2470545700BF85B2 /* View */,
+			);
+			path = Register;
+			sourceTree = "<group>";
+		};
+		8152DE0A2470545700BF85B2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8152DE0B2470545B00BF85B2 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		81A28E5F2470331C00975F8C = {
 			isa = PBXGroup;
 			children = (
@@ -158,6 +188,8 @@
 		81A28E93247034B600975F8C /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				8152DE09247050EB00BF85B2 /* Register */,
+				8152DE08247050E400BF85B2 /* Login */,
 				81A28E94247034CB00975F8C /* Welcome */,
 			);
 			path = Scenes;
