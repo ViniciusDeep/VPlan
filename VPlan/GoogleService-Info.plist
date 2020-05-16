@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>842460145206-974ccfq1vuu3ckejv42gs97ks38ifudl.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.842460145206-974ccfq1vuu3ckejv42gs97ks38ifudl</string>
+	<key>API_KEY</key>
+	<string>AIzaSyDJas4YXfxlC-nUges3MjD9vLF9q8-EukQ</string>
+	<key>GCM_SENDER_ID</key>
+	<string>842460145206</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.vinicius.VPlan</string>
+	<key>PROJECT_ID</key>
+	<string>fire-77440</string>
+	<key>STORAGE_BUCKET</key>
+	<string>fire-77440.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false/>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false/>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true/>
+	<key>IS_GCM_ENABLED</key>
+	<true/>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true/>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:842460145206:ios:5ed71eb01f4b09647d1a97</string>
+	<key>DATABASE_URL</key>
+	<string>https://fire-77440.firebaseio.com</string>
+</dict>
+</plist>

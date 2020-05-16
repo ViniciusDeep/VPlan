@@ -7,13 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		73329B59ECB8A050FAEEC189 /* Pods_VPlanTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3B79CBB40D42E253A57506E /* Pods_VPlanTests.framework */; };
 		81A28E6C2470331C00975F8C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A28E6B2470331C00975F8C /* AppDelegate.swift */; };
 		81A28E6E2470331C00975F8C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A28E6D2470331C00975F8C /* SceneDelegate.swift */; };
-		81A28E702470331C00975F8C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A28E6F2470331C00975F8C /* ViewController.swift */; };
-		81A28E732470331C00975F8C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81A28E712470331C00975F8C /* Main.storyboard */; };
 		81A28E752470332100975F8C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81A28E742470332100975F8C /* Assets.xcassets */; };
 		81A28E782470332100975F8C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81A28E762470332100975F8C /* LaunchScreen.storyboard */; };
 		81A28E832470332100975F8C /* VPlanTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A28E822470332100975F8C /* VPlanTests.swift */; };
+		81A28E922470349A00975F8C /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A28E912470349A00975F8C /* Coordinator.swift */; };
+		81A28E98247034EC00975F8C /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A28E97247034EC00975F8C /* LoginView.swift */; };
+		81A28E9A247039C200975F8C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 81A28E99247039C200975F8C /* GoogleService-Info.plist */; };
+		8704338E11B2DB8CE8D038EA /* Pods_VPlan.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C369BFC7821149CE02C9EB9 /* Pods_VPlan.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,17 +30,24 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2F8AA2A90617C9F4D75D4622 /* Pods-VPlanTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VPlanTests.release.xcconfig"; path = "Target Support Files/Pods-VPlanTests/Pods-VPlanTests.release.xcconfig"; sourceTree = "<group>"; };
+		31AE7B85D981BAAB16EA8751 /* Pods-VPlan.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VPlan.release.xcconfig"; path = "Target Support Files/Pods-VPlan/Pods-VPlan.release.xcconfig"; sourceTree = "<group>"; };
 		81A28E682470331C00975F8C /* VPlan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VPlan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		81A28E6B2470331C00975F8C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		81A28E6D2470331C00975F8C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		81A28E6F2470331C00975F8C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		81A28E722470331C00975F8C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		81A28E742470332100975F8C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		81A28E772470332100975F8C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		81A28E792470332100975F8C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		81A28E7E2470332100975F8C /* VPlanTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VPlanTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		81A28E822470332100975F8C /* VPlanTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VPlanTests.swift; sourceTree = "<group>"; };
 		81A28E842470332100975F8C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		81A28E912470349A00975F8C /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		81A28E97247034EC00975F8C /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		81A28E99247039C200975F8C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		8373F2C311910EB551D42D55 /* Pods-VPlanTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VPlanTests.debug.xcconfig"; path = "Target Support Files/Pods-VPlanTests/Pods-VPlanTests.debug.xcconfig"; sourceTree = "<group>"; };
+		964366FA788567CDF7EB38BD /* Pods-VPlan.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VPlan.debug.xcconfig"; path = "Target Support Files/Pods-VPlan/Pods-VPlan.debug.xcconfig"; sourceTree = "<group>"; };
+		9C369BFC7821149CE02C9EB9 /* Pods_VPlan.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VPlan.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B3B79CBB40D42E253A57506E /* Pods_VPlanTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VPlanTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8704338E11B2DB8CE8D038EA /* Pods_VPlan.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,6 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				73329B59ECB8A050FAEEC189 /* Pods_VPlanTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,6 +76,8 @@
 				81A28E6A2470331C00975F8C /* VPlan */,
 				81A28E812470332100975F8C /* VPlanTests */,
 				81A28E692470331C00975F8C /* Products */,
+				E9C03F50A4AC2B82809B0350 /* Pods */,
+				FE9C8E8D904B66546EED036A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -79,13 +93,12 @@
 		81A28E6A2470331C00975F8C /* VPlan */ = {
 			isa = PBXGroup;
 			children = (
-				81A28E6B2470331C00975F8C /* AppDelegate.swift */,
-				81A28E6D2470331C00975F8C /* SceneDelegate.swift */,
-				81A28E6F2470331C00975F8C /* ViewController.swift */,
-				81A28E712470331C00975F8C /* Main.storyboard */,
-				81A28E742470332100975F8C /* Assets.xcassets */,
-				81A28E762470332100975F8C /* LaunchScreen.storyboard */,
+				81A28E902470347500975F8C /* Coordinator */,
+				81A28E93247034B600975F8C /* Scenes */,
+				81A28E8E247033E000975F8C /* SupportingFiles */,
+				81A28E8D247033A300975F8C /* Resources */,
 				81A28E792470332100975F8C /* Info.plist */,
+				81A28E99247039C200975F8C /* GoogleService-Info.plist */,
 			);
 			path = VPlan;
 			sourceTree = "<group>";
@@ -99,6 +112,85 @@
 			path = VPlanTests;
 			sourceTree = "<group>";
 		};
+		81A28E8D247033A300975F8C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				81A28E742470332100975F8C /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		81A28E8E247033E000975F8C /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				81A28E762470332100975F8C /* LaunchScreen.storyboard */,
+				81A28E6B2470331C00975F8C /* AppDelegate.swift */,
+				81A28E6D2470331C00975F8C /* SceneDelegate.swift */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		81A28E902470347500975F8C /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				81A28E912470349A00975F8C /* Coordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		81A28E93247034B600975F8C /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				81A28E94247034CB00975F8C /* Login */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		81A28E94247034CB00975F8C /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				81A28E96247034DA00975F8C /* ViewModel */,
+				81A28E95247034D600975F8C /* View */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		81A28E95247034D600975F8C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				81A28E97247034EC00975F8C /* LoginView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		81A28E96247034DA00975F8C /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		E9C03F50A4AC2B82809B0350 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				964366FA788567CDF7EB38BD /* Pods-VPlan.debug.xcconfig */,
+				31AE7B85D981BAAB16EA8751 /* Pods-VPlan.release.xcconfig */,
+				8373F2C311910EB551D42D55 /* Pods-VPlanTests.debug.xcconfig */,
+				2F8AA2A90617C9F4D75D4622 /* Pods-VPlanTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		FE9C8E8D904B66546EED036A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9C369BFC7821149CE02C9EB9 /* Pods_VPlan.framework */,
+				B3B79CBB40D42E253A57506E /* Pods_VPlanTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -106,9 +198,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 81A28E872470332100975F8C /* Build configuration list for PBXNativeTarget "VPlan" */;
 			buildPhases = (
+				F3006115B0ACA45AA2567D29 /* [CP] Check Pods Manifest.lock */,
 				81A28E642470331C00975F8C /* Sources */,
 				81A28E652470331C00975F8C /* Frameworks */,
 				81A28E662470331C00975F8C /* Resources */,
+				B17117D8E3D70C396A42CE6C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -123,6 +217,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 81A28E8A2470332100975F8C /* Build configuration list for PBXNativeTarget "VPlanTests" */;
 			buildPhases = (
+				B58D1EE816A3E131FC985683 /* [CP] Check Pods Manifest.lock */,
 				81A28E7A2470332100975F8C /* Sources */,
 				81A28E7B2470332100975F8C /* Frameworks */,
 				81A28E7C2470332100975F8C /* Resources */,
@@ -182,7 +277,7 @@
 			files = (
 				81A28E782470332100975F8C /* LaunchScreen.storyboard in Resources */,
 				81A28E752470332100975F8C /* Assets.xcassets in Resources */,
-				81A28E732470331C00975F8C /* Main.storyboard in Resources */,
+				81A28E9A247039C200975F8C /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -195,14 +290,79 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		B17117D8E3D70C396A42CE6C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-VPlan/Pods-VPlan-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-VPlan/Pods-VPlan-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-VPlan/Pods-VPlan-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B58D1EE816A3E131FC985683 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-VPlanTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F3006115B0ACA45AA2567D29 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-VPlan-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		81A28E642470331C00975F8C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				81A28E702470331C00975F8C /* ViewController.swift in Sources */,
 				81A28E6C2470331C00975F8C /* AppDelegate.swift in Sources */,
 				81A28E6E2470331C00975F8C /* SceneDelegate.swift in Sources */,
+				81A28E98247034EC00975F8C /* LoginView.swift in Sources */,
+				81A28E922470349A00975F8C /* Coordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -225,14 +385,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		81A28E712470331C00975F8C /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				81A28E722470331C00975F8C /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		81A28E762470332100975F8C /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -360,6 +512,7 @@
 		};
 		81A28E882470332100975F8C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 964366FA788567CDF7EB38BD /* Pods-VPlan.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -378,6 +531,7 @@
 		};
 		81A28E892470332100975F8C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 31AE7B85D981BAAB16EA8751 /* Pods-VPlan.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -396,6 +550,7 @@
 		};
 		81A28E8B2470332100975F8C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8373F2C311910EB551D42D55 /* Pods-VPlanTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -418,6 +573,7 @@
 		};
 		81A28E8C2470332100975F8C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2F8AA2A90617C9F4D75D4622 /* Pods-VPlanTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";

@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  LoginView.swift
 //  VPlan
 //
 //  Created by Vinicius Mangueira on 16/05/20.
@@ -8,13 +8,12 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
+class LoginView: UIViewController {
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        view.backgroundColor = .white
     }
-
-
+    
+    
 }
-
