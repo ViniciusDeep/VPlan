@@ -7,6 +7,7 @@ target 'VPlan' do
 
   # Pods for VPlan
     pod 'Firebase/Analytics'
+    pod 'SwiftLint'
 
   target 'VPlanTests' do
     inherit! :search_paths

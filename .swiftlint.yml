@@ -1,0 +1,12 @@
+line_length:
+- 200 # warning
+- 300 # error
+disabled_rules:
+ - leading_whitespace
+ - trailing_whitespace
+ - vertical_whitespace
+ - private_over_fileprivate
+ - class_delegate_protocol
+ - identifier_name
+excluded:
+ - Pods
