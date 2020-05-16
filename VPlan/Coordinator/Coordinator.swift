@@ -24,7 +24,7 @@ struct AppCoordinator: Coordinator {
     }
     
     func loadFirstScene() {
-        window.rootViewController = UINavigationController(rootViewController: LoginView())
+        window.rootViewController = UINavigationController(rootViewController: WelcomeView())
         window.makeKeyAndVisible()
     }
 }
