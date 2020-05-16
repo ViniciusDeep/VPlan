@@ -42,7 +42,7 @@ class WelcomeView: UIViewController {
 extension Reactive where Base: WelcomeView {
     var moveToRegister: Binder<()> {
         return Binder(base) { (view, _) in
-            view.navigationController?.pushViewController(UIViewController(), animated: true)
+            view.navigationController?.pushViewController(RegisterView(), animated: true)
         }
     }
     
