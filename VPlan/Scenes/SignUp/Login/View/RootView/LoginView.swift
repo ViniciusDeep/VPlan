@@ -1,5 +1,5 @@
 //
-//  Register.swift
+//  LoginView.swift
 //  VPlan
 //
 //  Created by Vinicius Mangueira on 16/05/20.
@@ -10,15 +10,13 @@ import RxCocoa
 import RxSwift
 import FirebaseAuth
 
-class RegisterView: UIViewController {
+class LoginView: UIViewController {
     
-    let registerContentView = RegisterContentView()
-    
+    let contentView = LoginContentView()
     let disposeBag = DisposeBag()
+    var viewModel: LoginViewModel?
     
-    var viewModel: RegisterViewModel?
-    
-    convenience init(viewModel: RegisterViewModel) {
+    convenience init(viewModel: LoginViewModel) {
         self.init()
         self.viewModel = viewModel
     }
@@ -30,35 +28,35 @@ class RegisterView: UIViewController {
     }
     
     fileprivate func setupView() {
-        view = registerContentView
+        view = contentView
         view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(moveKeyboard)))
     }
     
     func bindViewModel() {
         guard let viewModel = viewModel else {return}
         
-        registerContentView.nameField.textField.rx.text.orEmpty.bind(to: viewModel.name).disposed(by: disposeBag)
-        registerContentView.emailField.textField.rx.text.orEmpty.bind(to: viewModel.email).disposed(by: disposeBag)
-        registerContentView.passwordField.textField.rx.text.orEmpty.bind(to: viewModel.password).disposed(by: disposeBag)
+        contentView.emailField.textField.rx.text.orEmpty.bind(to: viewModel.email).disposed(by: disposeBag)
+        contentView.passwordField.textField.rx.text.orEmpty.bind(to: viewModel.password).disposed(by: disposeBag)
         
-        viewModel.isChecked(name: registerContentView.nameField.textField.rx.text.orEmpty.asObservable(),
-                            email: registerContentView.emailField.textField.rx.text.orEmpty.asObservable(),
-                            password: registerContentView.passwordField.textField.rx.text.orEmpty.asObservable()).bind(to: registerContentView.rx.validateField).disposed(by: disposeBag)
+        viewModel.isChecked(email: contentView.emailField.textField.rx.text.orEmpty.asObservable(),
+                            password: contentView.passwordField.textField.rx.text.orEmpty.asObservable()).bind(to: contentView.rx.validateField).disposed(by: disposeBag)
         
-        viewModel.userCreatedPublishSubject.bind(to: rx.moveToFeed).disposed(by: disposeBag)
+        viewModel.loginSucessedPublishSubject.bind(to: rx.moveToFeed).disposed(by: disposeBag)
         
-        registerContentView.registerButton.rx.tap.bind(to: rx.createUser).disposed(by: disposeBag)
+        viewModel.loginErrorSubject.bind(to: rx.showMessageError).disposed(by: disposeBag)
+        
+        contentView.loginButton.rx.tap.bind(to: rx.login).disposed(by: disposeBag)
     }
     
     @objc fileprivate func moveKeyboard() {view.endEditing(true)}
 }
 
-extension Reactive where Base: RegisterView {
-    var createUser: Binder<()> {
-        return Binder(base) { (view, _) in
-            view.viewModel?.registerUser()
-        }
-    }
+extension Reactive where Base: LoginView {
+   var login: Binder<()> {
+       return Binder(base) { (view, _) in
+           view.viewModel?.didLoginUser()
+       }
+   }
     
    var moveToFeed: Binder<(AuthDataResult)> {
         return Binder(base) { (view, _) in

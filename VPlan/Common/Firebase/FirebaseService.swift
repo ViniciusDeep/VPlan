@@ -11,7 +11,8 @@ import FirebaseFirestore
 
 protocol CreatableFirebaseService {
     func didRegisterUser(name: String, email: String, password: String, completion: @escaping (Result<AuthDataResult, Error>) -> Void)
-    
+    func didLogin(email: String, password: String, completion: @escaping (Result<AuthDataResult, Error>) -> Void)
+    func sendToResetPassword(email: String, onSuccess: @escaping () -> Void, onError: @escaping (Error) -> Void)
 }
 
 
@@ -45,4 +46,25 @@ struct FirebaseService: CreatableFirebaseService {
             }
     }
     
+    func didLogin(email: String, password: String, completion: @escaping (Result<AuthDataResult, Error>) -> Void) {
+        auth.signIn(withEmail: email, password: password) { authResult, error in
+          if let err = error {
+              completion(.failure(err))
+          }
+          
+          if let result = authResult {
+                completion(.success(result))
+            }
+        }
+    }
+    
+    func sendToResetPassword(email: String, onSuccess: @escaping () -> Void, onError: @escaping (Error) -> Void) {
+        auth.sendPasswordReset(withEmail: email) { (error) in
+            if let error = error {
+                onError(error)
+            } else {
+                onSuccess()
+            }
+        }
+    }
 }
