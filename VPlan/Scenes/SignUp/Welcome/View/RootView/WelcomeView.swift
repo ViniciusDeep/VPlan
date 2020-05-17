@@ -25,7 +25,7 @@ class WelcomeView: UIViewController {
     
     fileprivate func setupView() {
         view.backgroundColor = .white
-        title = "Bem Vindo"
+        title = "Bem Vindo ao VPlan"
         navigationController?.navigationBar.prefersLargeTitles = true
     }
 

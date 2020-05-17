@@ -20,7 +20,6 @@ class FeedPlanView: UIViewController {
     convenience init(viewModel: FeedPlanViewModel) {
         self.init()
         self.viewModel = viewModel
-        
     }
     
     override func viewDidLoad() {

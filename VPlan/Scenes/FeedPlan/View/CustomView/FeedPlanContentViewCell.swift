@@ -13,14 +13,12 @@ class FeedPlanContentViewCell: UIView, ConfigurableView {
     let trackLayerView = TrackLayerView(trackColor: CGColor.random())
     
     let titleLabel = UILabel().then {
-            $0.text = "Personal"
-            $0.font = .systemFont(ofSize: 18)
+            $0.font = .boldSystemFont(ofSize: 18)
             $0.lineBreakMode = .byWordWrapping
             $0.numberOfLines = 0
     }
     
     let descriptionLabel = UILabel().then {
-        $0.text = "Apenas uma breve descrição sobre a vida."
         $0.font = .systemFont(ofSize: 14)
         $0.lineBreakMode = .byWordWrapping
         $0.numberOfLines = 0
