@@ -29,7 +29,8 @@ class CreatePlanView: UIViewController {
     }
     
     func setupView() {
-        navigationController?.navigationBar.setGradientBackground(colors: [#colorLiteral(red: 0.9882352941, green: 0.7137254902, blue: 0.6235294118, alpha: 1), #colorLiteral(red: 1, green: 0.9254901961, blue: 0.8235294118, alpha: 1)], startPoint: .topLeft, endPoint: .bottomRight)
+        navigationController?.navigationBar.setGradientBackground(colors: [#colorLiteral(red: 0.03137254902, green: 0.3411764706, blue: 0.6705882353, alpha: 1), #colorLiteral(red: 0.03137254902, green: 0.3411764706, blue: 0.6705882353, alpha: 1)], startPoint: .topLeft, endPoint: .bottomRight)
+        navigationController?.navigationBar.tintColor = .white
         navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
         title = "Criar Pauta"
         view = createPlanContentView

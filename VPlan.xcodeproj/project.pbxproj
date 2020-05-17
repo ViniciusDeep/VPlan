@@ -16,6 +16,12 @@
 		810BE84424708E5400C94650 /* ForgotPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810BE84324708E5400C94650 /* ForgotPasswordView.swift */; };
 		810BE84624708F9400C94650 /* ForgotPasswordContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810BE84524708F9400C94650 /* ForgotPasswordContentView.swift */; };
 		810BE8482470904800C94650 /* ForgotPasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810BE8472470904800C94650 /* ForgotPasswordViewModel.swift */; };
+		812990562471D8F000C046C7 /* FeedPlanViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812990552471D8F000C046C7 /* FeedPlanViewModel.swift */; };
+		812990582471DEEA00C046C7 /* FeedPlanContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812990572471DEEA00C046C7 /* FeedPlanContentView.swift */; };
+		8129905A2471E02300C046C7 /* FeedPlanTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812990592471E02300C046C7 /* FeedPlanTableViewCell.swift */; };
+		8129905C2471E56A00C046C7 /* FeedPlanContentViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8129905B2471E56A00C046C7 /* FeedPlanContentViewCell.swift */; };
+		8129905E2471E78800C046C7 /* UITableView+Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8129905D2471E78800C046C7 /* UITableView+Animation.swift */; };
+		812990602471EEEB00C046C7 /* TrackLayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8129905F2471EEEB00C046C7 /* TrackLayerView.swift */; };
 		8152DE0724704F6D00BF85B2 /* InteractionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8152DE0624704F6D00BF85B2 /* InteractionButton.swift */; };
 		8152DE0F2470562C00BF85B2 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8152DE0E2470562C00BF85B2 /* RegisterView.swift */; };
 		81867C302471808B00BB74E1 /* FeedPlanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81867C2F2471808B00BB74E1 /* FeedPlanView.swift */; };
@@ -62,6 +68,12 @@
 		810BE84324708E5400C94650 /* ForgotPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordView.swift; sourceTree = "<group>"; };
 		810BE84524708F9400C94650 /* ForgotPasswordContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordContentView.swift; sourceTree = "<group>"; };
 		810BE8472470904800C94650 /* ForgotPasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewModel.swift; sourceTree = "<group>"; };
+		812990552471D8F000C046C7 /* FeedPlanViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedPlanViewModel.swift; sourceTree = "<group>"; };
+		812990572471DEEA00C046C7 /* FeedPlanContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedPlanContentView.swift; sourceTree = "<group>"; };
+		812990592471E02300C046C7 /* FeedPlanTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedPlanTableViewCell.swift; sourceTree = "<group>"; };
+		8129905B2471E56A00C046C7 /* FeedPlanContentViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedPlanContentViewCell.swift; sourceTree = "<group>"; };
+		8129905D2471E78800C046C7 /* UITableView+Animation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Animation.swift"; sourceTree = "<group>"; };
+		8129905F2471EEEB00C046C7 /* TrackLayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackLayerView.swift; sourceTree = "<group>"; };
 		8152DE0624704F6D00BF85B2 /* InteractionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractionButton.swift; sourceTree = "<group>"; };
 		8152DE0E2470562C00BF85B2 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 		81867C2F2471808B00BB74E1 /* FeedPlanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedPlanView.swift; sourceTree = "<group>"; };
@@ -232,6 +244,7 @@
 				8152DE0624704F6D00BF85B2 /* InteractionButton.swift */,
 				81E75354247058B0004B44EB /* InteractionTextField.swift */,
 				81867C3524718DD200BB74E1 /* GradientNavigationBar.swift */,
+				8129905F2471EEEB00C046C7 /* TrackLayerView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -308,6 +321,7 @@
 		81867C2C2471807000BB74E1 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				812990552471D8F000C046C7 /* FeedPlanViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -315,6 +329,9 @@
 		81867C2D2471807600BB74E1 /* CustomView */ = {
 			isa = PBXGroup;
 			children = (
+				812990572471DEEA00C046C7 /* FeedPlanContentView.swift */,
+				812990592471E02300C046C7 /* FeedPlanTableViewCell.swift */,
+				8129905B2471E56A00C046C7 /* FeedPlanContentViewCell.swift */,
 			);
 			path = CustomView;
 			sourceTree = "<group>";
@@ -488,6 +505,7 @@
 			children = (
 				81F465802470433E000AA11E /* Then.swift */,
 				81F465822470435A000AA11E /* ConfigurableView.swift */,
+				8129905D2471E78800C046C7 /* UITableView+Animation.swift */,
 			);
 			path = UIView;
 			sourceTree = "<group>";
@@ -702,6 +720,7 @@
 				819DDF3C24719ADE00E143C0 /* FirebaseFirestoreService.swift in Sources */,
 				810BE83B2470839B00C94650 /* LoginContentView.swift in Sources */,
 				81A28E6C2470331C00975F8C /* AppDelegate.swift in Sources */,
+				8129905A2471E02300C046C7 /* FeedPlanTableViewCell.swift in Sources */,
 				81A28E6E2470331C00975F8C /* SceneDelegate.swift in Sources */,
 				81E75355247058B0004B44EB /* InteractionTextField.swift in Sources */,
 				81867C302471808B00BB74E1 /* FeedPlanView.swift in Sources */,
@@ -710,18 +729,23 @@
 				81A28E98247034EC00975F8C /* WelcomeView.swift in Sources */,
 				810BE832247077FC00C94650 /* FirebaseAuthService.swift in Sources */,
 				81867C3C2471941600BB74E1 /* CreatePlanViewModel.swift in Sources */,
+				812990562471D8F000C046C7 /* FeedPlanViewModel.swift in Sources */,
 				81E7535324705724004B44EB /* RegisterContentView.swift in Sources */,
 				8152DE0F2470562C00BF85B2 /* RegisterView.swift in Sources */,
 				81F4657D247042B7000AA11E /* WelcomeContentView.swift in Sources */,
 				810BE83D247083B000C94650 /* LoginViewModel.swift in Sources */,
 				81E7535924706523004B44EB /* RegisterViewModel.swift in Sources */,
+				812990582471DEEA00C046C7 /* FeedPlanContentView.swift in Sources */,
 				81F465832470435A000AA11E /* ConfigurableView.swift in Sources */,
 				81F465812470433E000AA11E /* Then.swift in Sources */,
+				8129905C2471E56A00C046C7 /* FeedPlanContentViewCell.swift in Sources */,
 				81867C3624718DD200BB74E1 /* GradientNavigationBar.swift in Sources */,
+				8129905E2471E78800C046C7 /* UITableView+Animation.swift in Sources */,
 				8152DE0724704F6D00BF85B2 /* InteractionButton.swift in Sources */,
 				810BE84624708F9400C94650 /* ForgotPasswordContentView.swift in Sources */,
 				81867C3824718FB500BB74E1 /* CreatePlanContentView.swift in Sources */,
 				810BE8482470904800C94650 /* ForgotPasswordViewModel.swift in Sources */,
+				812990602471EEEB00C046C7 /* TrackLayerView.swift in Sources */,
 				81A28E922470349A00975F8C /* Coordinator.swift in Sources */,
 				810BE84424708E5400C94650 /* ForgotPasswordView.swift in Sources */,
 				810BE82F2470698E00C94650 /* Regex.swift in Sources */,

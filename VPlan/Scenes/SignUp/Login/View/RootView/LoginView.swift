@@ -58,7 +58,7 @@ extension Reactive where Base: LoginView {
     
    var moveToFeed: Binder<(AuthDataResult)> {
         return Binder(base) { (view, _) in
-            let feedPlanView = UINavigationController(rootViewController: FeedPlanView())
+            let feedPlanView = UINavigationController(rootViewController: FeedPlanView(viewModel: FeedPlanViewModel(firebaseFireStoreService: FirebaseFireStoreService())))
             feedPlanView.modalPresentationStyle = .fullScreen
             view.present(feedPlanView, animated: true, completion: nil)
         }

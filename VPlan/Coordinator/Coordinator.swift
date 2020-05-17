@@ -28,7 +28,7 @@ struct AppCoordinator: Coordinator {
         if Auth.auth().currentUser == nil {
             window.rootViewController = UINavigationController(rootViewController: WelcomeView())
         } else {
-            window.rootViewController = UINavigationController(rootViewController: FeedPlanView())
+            window.rootViewController = UINavigationController(rootViewController: FeedPlanView(viewModel: FeedPlanViewModel(firebaseFireStoreService: FirebaseFireStoreService())))
         }
         window.makeKeyAndVisible()
     }

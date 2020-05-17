@@ -7,18 +7,37 @@
 //
 
 import RxCocoa
+import RxSwift
 
 class FeedPlanView: UIViewController {
     
+    let disposeBag = DisposeBag()
+    
+    let contentView = FeedPlanContentView()
+    
+    var viewModel: FeedPlanViewModel?
+    
+    convenience init(viewModel: FeedPlanViewModel) {
+        self.init()
+        self.viewModel = viewModel
+        
+    }
+    
     override func viewDidLoad() {
-        super.viewDidLoad()
-        view.backgroundColor = .white
-        setupView()
+         super.viewDidLoad()
+         setupView()
+         bindUI()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        viewModel?.fetchPlans()
     }
     
     func setupView() {
-        navigationController?.navigationBar.setGradientBackground(colors: [#colorLiteral(red: 0.9882352941, green: 0.7137254902, blue: 0.6235294118, alpha: 1), #colorLiteral(red: 1, green: 0.9254901961, blue: 0.8235294118, alpha: 1)], startPoint: .topLeft, endPoint: .bottomRight)
-        navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
+        view = contentView
+        navigationController?.navigationBar.setupDefaultNavigationBar()
+        navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .compose, target: self, action: nil)
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(didOpenCreatePlanView))
         title = "Suas Pautas"
         view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(moveKeyboard)))
@@ -27,5 +46,14 @@ class FeedPlanView: UIViewController {
     @objc func didOpenCreatePlanView() {
         let feedPlanView = UINavigationController(rootViewController: CreatePlanView(viewModel: CreatePlanViewModel(firebaseFireStoreService: FirebaseFireStoreService())))
         feedPlanView.modalPresentationStyle = .fullScreen
-        self.present(feedPlanView, animated: true, completion: nil)}
+        self.present(feedPlanView, animated: true, completion: nil)
+    }
+    
+    func bindUI() {
+        guard let viewModel = self.viewModel else {return}
+        viewModel.plansSubject.bind(to: contentView.tableView.rx.items(cellIdentifier: "cellId", cellType: FeedPlanTableViewCell.self)) { (_, plan, cell) in
+            cell.animationToRight()
+            cell.setup(withPlan: plan)
+        }.disposed(by: disposeBag)
+    }
 }
