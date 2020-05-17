@@ -60,7 +60,9 @@ extension Reactive where Base: LoginView {
     
    var moveToFeed: Binder<(AuthDataResult)> {
         return Binder(base) { (view, _) in
-            view.navigationController?.pushViewController(UIViewController(), animated: true)
+            let feedPlanView = FeedPlanView()
+            feedPlanView.modalPresentationStyle = .fullScreen
+            view.present(feedPlanView, animated: true, completion: nil)
         }
     }
         

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 protocol Coordinator {
     func start()
@@ -24,7 +25,11 @@ struct AppCoordinator: Coordinator {
     }
     
     func loadFirstScene() {
-        window.rootViewController = UINavigationController(rootViewController: WelcomeView())
+        if Auth.auth().currentUser == nil {
+            window.rootViewController = UINavigationController(rootViewController: WelcomeView())
+        } else {
+            window.rootViewController = UINavigationController(rootViewController: CreatePlanView())
+        }
         window.makeKeyAndVisible()
     }
 }
