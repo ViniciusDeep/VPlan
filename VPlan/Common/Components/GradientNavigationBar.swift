@@ -65,6 +65,13 @@ class UINavigationBarGradientView: UIView {
 }
 
 extension UINavigationBar {
+    func setupDefaultNavigationBar() {
+        self.setGradientBackground(colors: [#colorLiteral(red: 0.03137254902, green: 0.3411764706, blue: 0.6705882353, alpha: 1), #colorLiteral(red: 0.03137254902, green: 0.3411764706, blue: 0.6705882353, alpha: 1)], startPoint: .topLeft, endPoint: .bottomRight)
+        self.tintColor = .white
+        self.titleTextAttributes = [.foregroundColor: UIColor.white]
+    }
+    
+    
     func setGradientBackground(colors: [UIColor],
                                startPoint: UINavigationBarGradientView.Point = .topLeft,
                                endPoint: UINavigationBarGradientView.Point = .bottomLeft,
