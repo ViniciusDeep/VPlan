@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		73329B59ECB8A050FAEEC189 /* Pods_VPlanTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3B79CBB40D42E253A57506E /* Pods_VPlanTests.framework */; };
 		810BE82F2470698E00C94650 /* Regex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810BE82E2470698E00C94650 /* Regex.swift */; };
-		810BE832247077FC00C94650 /* FirebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810BE831247077FC00C94650 /* FirebaseService.swift */; };
+		810BE832247077FC00C94650 /* FirebaseAuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810BE831247077FC00C94650 /* FirebaseAuthService.swift */; };
 		810BE8392470838E00C94650 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810BE8382470838E00C94650 /* LoginView.swift */; };
 		810BE83B2470839B00C94650 /* LoginContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810BE83A2470839B00C94650 /* LoginContentView.swift */; };
 		810BE83D247083B000C94650 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810BE83C247083B000C94650 /* LoginViewModel.swift */; };
@@ -18,6 +18,12 @@
 		810BE8482470904800C94650 /* ForgotPasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810BE8472470904800C94650 /* ForgotPasswordViewModel.swift */; };
 		8152DE0724704F6D00BF85B2 /* InteractionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8152DE0624704F6D00BF85B2 /* InteractionButton.swift */; };
 		8152DE0F2470562C00BF85B2 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8152DE0E2470562C00BF85B2 /* RegisterView.swift */; };
+		81867C302471808B00BB74E1 /* FeedPlanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81867C2F2471808B00BB74E1 /* FeedPlanView.swift */; };
+		81867C3424718C5000BB74E1 /* CreatePlanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81867C3324718C5000BB74E1 /* CreatePlanView.swift */; };
+		81867C3624718DD200BB74E1 /* GradientNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81867C3524718DD200BB74E1 /* GradientNavigationBar.swift */; };
+		81867C3824718FB500BB74E1 /* CreatePlanContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81867C3724718FB500BB74E1 /* CreatePlanContentView.swift */; };
+		81867C3C2471941600BB74E1 /* CreatePlanViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81867C3B2471941600BB74E1 /* CreatePlanViewModel.swift */; };
+		819DDF3C24719ADE00E143C0 /* FirebaseFirestoreService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819DDF3B24719ADE00E143C0 /* FirebaseFirestoreService.swift */; };
 		81A28E6C2470331C00975F8C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A28E6B2470331C00975F8C /* AppDelegate.swift */; };
 		81A28E6E2470331C00975F8C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A28E6D2470331C00975F8C /* SceneDelegate.swift */; };
 		81A28E752470332100975F8C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81A28E742470332100975F8C /* Assets.xcassets */; };
@@ -49,7 +55,7 @@
 		2F8AA2A90617C9F4D75D4622 /* Pods-VPlanTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VPlanTests.release.xcconfig"; path = "Target Support Files/Pods-VPlanTests/Pods-VPlanTests.release.xcconfig"; sourceTree = "<group>"; };
 		31AE7B85D981BAAB16EA8751 /* Pods-VPlan.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VPlan.release.xcconfig"; path = "Target Support Files/Pods-VPlan/Pods-VPlan.release.xcconfig"; sourceTree = "<group>"; };
 		810BE82E2470698E00C94650 /* Regex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Regex.swift; sourceTree = "<group>"; };
-		810BE831247077FC00C94650 /* FirebaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseService.swift; sourceTree = "<group>"; };
+		810BE831247077FC00C94650 /* FirebaseAuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAuthService.swift; sourceTree = "<group>"; };
 		810BE8382470838E00C94650 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		810BE83A2470839B00C94650 /* LoginContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginContentView.swift; sourceTree = "<group>"; };
 		810BE83C247083B000C94650 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
@@ -58,6 +64,12 @@
 		810BE8472470904800C94650 /* ForgotPasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewModel.swift; sourceTree = "<group>"; };
 		8152DE0624704F6D00BF85B2 /* InteractionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractionButton.swift; sourceTree = "<group>"; };
 		8152DE0E2470562C00BF85B2 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
+		81867C2F2471808B00BB74E1 /* FeedPlanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedPlanView.swift; sourceTree = "<group>"; };
+		81867C3324718C5000BB74E1 /* CreatePlanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePlanView.swift; sourceTree = "<group>"; };
+		81867C3524718DD200BB74E1 /* GradientNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientNavigationBar.swift; sourceTree = "<group>"; };
+		81867C3724718FB500BB74E1 /* CreatePlanContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePlanContentView.swift; sourceTree = "<group>"; };
+		81867C3B2471941600BB74E1 /* CreatePlanViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePlanViewModel.swift; sourceTree = "<group>"; };
+		819DDF3B24719ADE00E143C0 /* FirebaseFirestoreService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseFirestoreService.swift; sourceTree = "<group>"; };
 		81A28E682470331C00975F8C /* VPlan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VPlan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		81A28E6B2470331C00975F8C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		81A28E6D2470331C00975F8C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -113,7 +125,8 @@
 		810BE830247077F100C94650 /* Firebase */ = {
 			isa = PBXGroup;
 			children = (
-				810BE831247077FC00C94650 /* FirebaseService.swift */,
+				810BE831247077FC00C94650 /* FirebaseAuthService.swift */,
+				819DDF3B24719ADE00E143C0 /* FirebaseFirestoreService.swift */,
 			);
 			path = Firebase;
 			sourceTree = "<group>";
@@ -218,6 +231,7 @@
 			children = (
 				8152DE0624704F6D00BF85B2 /* InteractionButton.swift */,
 				81E75354247058B0004B44EB /* InteractionTextField.swift */,
+				81867C3524718DD200BB74E1 /* GradientNavigationBar.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -260,6 +274,88 @@
 			isa = PBXGroup;
 			children = (
 				81E7535224705724004B44EB /* RegisterContentView.swift */,
+			);
+			path = CustomView;
+			sourceTree = "<group>";
+		};
+		81867C292471803D00BB74E1 /* FeedPlan */ = {
+			isa = PBXGroup;
+			children = (
+				81867C2C2471807000BB74E1 /* ViewModel */,
+				81867C2B2471806B00BB74E1 /* View */,
+			);
+			path = FeedPlan;
+			sourceTree = "<group>";
+		};
+		81867C2A2471804B00BB74E1 /* CreatePlan */ = {
+			isa = PBXGroup;
+			children = (
+				81867C3224718B2600BB74E1 /* ViewModel */,
+				81867C3124718B2200BB74E1 /* View */,
+			);
+			path = CreatePlan;
+			sourceTree = "<group>";
+		};
+		81867C2B2471806B00BB74E1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				81867C2E2471807B00BB74E1 /* RootView */,
+				81867C2D2471807600BB74E1 /* CustomView */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		81867C2C2471807000BB74E1 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		81867C2D2471807600BB74E1 /* CustomView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CustomView;
+			sourceTree = "<group>";
+		};
+		81867C2E2471807B00BB74E1 /* RootView */ = {
+			isa = PBXGroup;
+			children = (
+				81867C2F2471808B00BB74E1 /* FeedPlanView.swift */,
+			);
+			path = RootView;
+			sourceTree = "<group>";
+		};
+		81867C3124718B2200BB74E1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				81867C3A2471903C00BB74E1 /* CustomView */,
+				81867C392471903700BB74E1 /* RootView */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		81867C3224718B2600BB74E1 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				81867C3B2471941600BB74E1 /* CreatePlanViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		81867C392471903700BB74E1 /* RootView */ = {
+			isa = PBXGroup;
+			children = (
+				81867C3324718C5000BB74E1 /* CreatePlanView.swift */,
+			);
+			path = RootView;
+			sourceTree = "<group>";
+		};
+		81867C3A2471903C00BB74E1 /* CustomView */ = {
+			isa = PBXGroup;
+			children = (
+				81867C3724718FB500BB74E1 /* CreatePlanContentView.swift */,
 			);
 			path = CustomView;
 			sourceTree = "<group>";
@@ -336,6 +432,8 @@
 		81A28E93247034B600975F8C /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				81867C2A2471804B00BB74E1 /* CreatePlan */,
+				81867C292471803D00BB74E1 /* FeedPlan */,
 				810BE84924709B8400C94650 /* SignUp */,
 			);
 			path = Scenes;
@@ -601,13 +699,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				819DDF3C24719ADE00E143C0 /* FirebaseFirestoreService.swift in Sources */,
 				810BE83B2470839B00C94650 /* LoginContentView.swift in Sources */,
 				81A28E6C2470331C00975F8C /* AppDelegate.swift in Sources */,
 				81A28E6E2470331C00975F8C /* SceneDelegate.swift in Sources */,
 				81E75355247058B0004B44EB /* InteractionTextField.swift in Sources */,
+				81867C302471808B00BB74E1 /* FeedPlanView.swift in Sources */,
+				81867C3424718C5000BB74E1 /* CreatePlanView.swift in Sources */,
 				810BE8392470838E00C94650 /* LoginView.swift in Sources */,
 				81A28E98247034EC00975F8C /* WelcomeView.swift in Sources */,
-				810BE832247077FC00C94650 /* FirebaseService.swift in Sources */,
+				810BE832247077FC00C94650 /* FirebaseAuthService.swift in Sources */,
+				81867C3C2471941600BB74E1 /* CreatePlanViewModel.swift in Sources */,
 				81E7535324705724004B44EB /* RegisterContentView.swift in Sources */,
 				8152DE0F2470562C00BF85B2 /* RegisterView.swift in Sources */,
 				81F4657D247042B7000AA11E /* WelcomeContentView.swift in Sources */,
@@ -615,8 +717,10 @@
 				81E7535924706523004B44EB /* RegisterViewModel.swift in Sources */,
 				81F465832470435A000AA11E /* ConfigurableView.swift in Sources */,
 				81F465812470433E000AA11E /* Then.swift in Sources */,
+				81867C3624718DD200BB74E1 /* GradientNavigationBar.swift in Sources */,
 				8152DE0724704F6D00BF85B2 /* InteractionButton.swift in Sources */,
 				810BE84624708F9400C94650 /* ForgotPasswordContentView.swift in Sources */,
+				81867C3824718FB500BB74E1 /* CreatePlanContentView.swift in Sources */,
 				810BE8482470904800C94650 /* ForgotPasswordViewModel.swift in Sources */,
 				81A28E922470349A00975F8C /* Coordinator.swift in Sources */,
 				810BE84424708E5400C94650 /* ForgotPasswordView.swift in Sources */,

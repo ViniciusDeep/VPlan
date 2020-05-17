@@ -20,3 +20,7 @@ extension ConfigurableView {
         func setupConstraints() {}
     }
 }
+
+extension UIViewController {
+    @objc func moveKeyboard() {view.endEditing(true)}
+}

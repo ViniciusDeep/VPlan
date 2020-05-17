@@ -9,18 +9,20 @@
 import FirebaseAuth
 import FirebaseFirestore
 
-protocol CreatableFirebaseService {
+protocol CreatableAuthFirebaseService {
     func didRegisterUser(name: String, email: String, password: String, completion: @escaping (Result<AuthDataResult, Error>) -> Void)
     func didLogin(email: String, password: String, completion: @escaping (Result<AuthDataResult, Error>) -> Void)
     func sendToResetPassword(email: String, onSuccess: @escaping () -> Void, onError: @escaping (Error) -> Void)
 }
 
 
-struct FirebaseService: CreatableFirebaseService {
+struct FirebaseAuthService: CreatableAuthFirebaseService {
     
     let auth = Auth.auth()
     
     let fireStore = Firestore.firestore()
+    
+    func getCurrentUserUID() -> String {auth.currentUser?.uid ?? ""}
     
     func didRegisterUser(name: String, email: String, password: String, completion: @escaping (Result<AuthDataResult, Error>) -> Void) {
         self.auth.createUser(withEmail: email, password: password) { (result, error) in
@@ -31,7 +33,8 @@ struct FirebaseService: CreatableFirebaseService {
             if let result = result {
                 var ref: DocumentReference?
     
-                ref = self.fireStore.collection("users").addDocument(data: [
+                ref = self.fireStore.collection("users").document(self.getCurrentUserUID()).collection("user_info")
+                    .addDocument(data: [
                                           "name": name,
                                           "uuid": "\(result.user.uid)"
                     ]) { err in

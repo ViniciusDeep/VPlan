@@ -47,8 +47,6 @@ class LoginView: UIViewController {
         
         contentView.loginButton.rx.tap.bind(to: rx.login).disposed(by: disposeBag)
     }
-    
-    @objc fileprivate func moveKeyboard() {view.endEditing(true)}
 }
 
 extension Reactive where Base: LoginView {
@@ -60,7 +58,9 @@ extension Reactive where Base: LoginView {
     
    var moveToFeed: Binder<(AuthDataResult)> {
         return Binder(base) { (view, _) in
-            view.navigationController?.pushViewController(UIViewController(), animated: true)
+            let feedPlanView = UINavigationController(rootViewController: FeedPlanView())
+            feedPlanView.modalPresentationStyle = .fullScreen
+            view.present(feedPlanView, animated: true, completion: nil)
         }
     }
         

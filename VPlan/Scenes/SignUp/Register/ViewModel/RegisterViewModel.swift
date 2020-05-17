@@ -21,7 +21,7 @@ struct RegisterViewModel {
     let email = BehaviorRelay<String>(value: "")
     let password = BehaviorRelay<String>(value: "")
     let name = BehaviorRelay<String>(value: "")
-    let firebaseService: CreatableFirebaseService
+    let firebaseService: CreatableAuthFirebaseService
     
     let userCreatedPublishSubject = PublishSubject<AuthDataResult>()
     let userCreatedError = PublishSubject<Error>()
@@ -40,7 +40,7 @@ struct RegisterViewModel {
          }
       }
     
-    init(firebaseService: CreatableFirebaseService) {
+    init(firebaseService: CreatableAuthFirebaseService) {
         self.firebaseService = firebaseService
         isValid = Observable.combineLatest(self.email.asObservable(), self.password.asObservable(), self.name.asObservable()) { (email, password, name) in
             return email == ""

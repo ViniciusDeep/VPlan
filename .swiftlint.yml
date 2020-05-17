@@ -2,6 +2,7 @@ line_length:
 - 200 # warning
 - 300 # error
 disabled_rules:
+ - multiple_closures_with_trailing_closure
  - leading_whitespace
  - trailing_whitespace
  - vertical_whitespace

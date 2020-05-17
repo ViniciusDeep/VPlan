@@ -51,8 +51,6 @@ class RegisterView: UIViewController {
         
         registerContentView.registerButton.rx.tap.bind(to: rx.createUser).disposed(by: disposeBag)
     }
-    
-    @objc fileprivate func moveKeyboard() {view.endEditing(true)}
 }
 
 extension Reactive where Base: RegisterView {
@@ -64,7 +62,9 @@ extension Reactive where Base: RegisterView {
     
    var moveToFeed: Binder<(AuthDataResult)> {
         return Binder(base) { (view, _) in
-            view.navigationController?.pushViewController(UIViewController(), animated: true)
+            let feedPlanView = UINavigationController(rootViewController: FeedPlanView())
+            feedPlanView.modalPresentationStyle = .fullScreen
+            view.present(feedPlanView, animated: true, completion: nil)
         }
     }
         
