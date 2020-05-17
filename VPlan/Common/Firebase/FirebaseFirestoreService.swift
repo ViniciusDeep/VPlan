@@ -11,6 +11,7 @@ import FirebaseFirestore
 
 protocol CreatableFirebaseFireStoreService {
     func createPlan(title: String, description: String, details: String, onSuccess: @escaping () -> Void, onFailure: @escaping (Error) -> Void)
+    func fetchPlans(completion: @escaping (Result<[Plan], Error>) -> Void)
 }
 
 struct FirebaseFireStoreService: CreatableFirebaseFireStoreService {
@@ -29,7 +30,36 @@ struct FirebaseFireStoreService: CreatableFirebaseFireStoreService {
                 onFailure(err)
                 } else {
                     onSuccess()
-                }
             }
         }
+    }
+    
+    func fetchPlans(completion: @escaping (Result<[Plan], Error>) -> Void) {
+        fireStore.collection("users")
+            .document(FirebaseAuthService()
+                .getCurrentUserUID()).collection("plans").getDocuments { (snapshot, error) in
+                    if let error = error {
+                        completion(.failure(error))
+                    }
+                    
+                    if let snapshot = snapshot {
+                        let plans = snapshot.documents.map { (document) -> Plan in
+                            let data = document.data()
+                            return Plan(description: data["description"] as? String ?? "",
+                                        title: data["title"] as? String ?? "",
+                                        isOpen: data["isOpen"] as? Bool ?? false,
+                                        details: data["details"] as? String ?? "")
+                        }
+                        
+                        completion(.success(plans))
+                }
+        }
+    }
+}
+
+struct Plan: Decodable {
+    let description: String
+    let title: String
+    let isOpen: Bool
+    let details: String
 }
