@@ -43,19 +43,19 @@ class WelcomeView: UIViewController {
 extension Reactive where Base: WelcomeView {
     var moveToRegister: Binder<()> {
         return Binder(base) { (view, _) in
-            view.navigationController?.pushViewController(RegisterView(viewModel: RegisterViewModel(firebaseService: FirebaseService())), animated: true)
+            view.navigationController?.pushViewController(RegisterView(viewModel: RegisterViewModel(firebaseService: FirebaseAuthService())), animated: true)
         }
     }
     
     var moveToSignIn: Binder<()> {
         return Binder(base) { (view, _) in
-            view.navigationController?.pushViewController(LoginView(viewModel: LoginViewModel(firebaseService: FirebaseService())), animated: true)
+            view.navigationController?.pushViewController(LoginView(viewModel: LoginViewModel(firebaseService: FirebaseAuthService())), animated: true)
         }
     }
     
     var moveToResetPassword: Binder<()> {
         return Binder(base) { (view, _) in
-            view.navigationController?.pushViewController(ForgotPasswordView(viewModel: ForgotPasswordViewModel(firebaseService: FirebaseService())), animated: true)
+            view.navigationController?.pushViewController(ForgotPasswordView(viewModel: ForgotPasswordViewModel(firebaseService: FirebaseAuthService())), animated: true)
         }
     }
 }

@@ -7,9 +7,11 @@
 //
 
 import SnapKit
+import RxCocoa
+import RxSwift
 
 class CreatePlanContentView: UIView {
-    let bannerImage = UIImageView().then {
+        let bannerImage = UIImageView().then {
               $0.image = #imageLiteral(resourceName: "signIn")
               $0.contentMode = .scaleAspectFit
         }
@@ -70,18 +72,14 @@ class CreatePlanContentView: UIView {
             }
         }
         
-        func update(fieldType: FieldType) {
+        func update(fieldType: PlanField) {
             switch fieldType {
-            case .email:
-                self.disableButton()
-            case .password:
-                self.disableButton()
-            case .name:
-                self.disableButton()
             case .none:
                 registerPlanButton.backgroundColor = #colorLiteral(red: 0.03137254902, green: 0.3411764706, blue: 0.6705882353, alpha: 1)
                 registerPlanButton.setTitleColor(.white, for: .normal)
                 registerPlanButton.isEnabled = true
+            default:
+                self.disableButton()
             }
         }
         
@@ -90,4 +88,12 @@ class CreatePlanContentView: UIView {
             registerPlanButton.setTitleColor(.black, for: .normal)
             registerPlanButton.isEnabled = false
         }
+}
+
+extension Reactive where Base: CreatePlanContentView {
+    var validateField: Binder<(PlanField)> {
+        return Binder(base) { (view, fieldType) in
+            view.update(fieldType: fieldType)
+        }
+    }
 }

@@ -13,7 +13,7 @@ import FirebaseAuth
 struct LoginViewModel {
     let email = BehaviorRelay<String>(value: "")
     let password = BehaviorRelay<String>(value: "")
-    let firebaseService: CreatableFirebaseService
+    let firebaseService: CreatableAuthFirebaseService
     
     let loginSucessedPublishSubject = PublishSubject<AuthDataResult>()
     let loginErrorSubject = PublishSubject<Error>()
@@ -30,7 +30,7 @@ struct LoginViewModel {
          }
       }
     
-    init(firebaseService: CreatableFirebaseService) {
+    init(firebaseService: CreatableAuthFirebaseService) {
         self.firebaseService = firebaseService
         isValid = Observable.combineLatest(self.email.asObservable(), self.password.asObservable()) { (email, password) in
             return email == ""

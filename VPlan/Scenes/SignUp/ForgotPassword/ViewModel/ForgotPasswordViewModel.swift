@@ -12,12 +12,12 @@ import FirebaseAuth
 
 struct ForgotPasswordViewModel {
     let email = BehaviorRelay<String>(value: "")
-    let firebaseService: CreatableFirebaseService
+    let firebaseService: CreatableAuthFirebaseService
     
     let resetPasswordSucessedPublishSubject = PublishSubject<Void>()
     let resetPasswordErrorSubject = PublishSubject<Error>()
       
-    init(firebaseService: CreatableFirebaseService) {
+    init(firebaseService: CreatableAuthFirebaseService) {
         self.firebaseService = firebaseService
     }
     

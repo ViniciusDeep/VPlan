@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		73329B59ECB8A050FAEEC189 /* Pods_VPlanTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3B79CBB40D42E253A57506E /* Pods_VPlanTests.framework */; };
 		810BE82F2470698E00C94650 /* Regex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810BE82E2470698E00C94650 /* Regex.swift */; };
-		810BE832247077FC00C94650 /* FirebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810BE831247077FC00C94650 /* FirebaseService.swift */; };
+		810BE832247077FC00C94650 /* FirebaseAuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810BE831247077FC00C94650 /* FirebaseAuthService.swift */; };
 		810BE8392470838E00C94650 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810BE8382470838E00C94650 /* LoginView.swift */; };
 		810BE83B2470839B00C94650 /* LoginContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810BE83A2470839B00C94650 /* LoginContentView.swift */; };
 		810BE83D247083B000C94650 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810BE83C247083B000C94650 /* LoginViewModel.swift */; };
@@ -22,6 +22,8 @@
 		81867C3424718C5000BB74E1 /* CreatePlanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81867C3324718C5000BB74E1 /* CreatePlanView.swift */; };
 		81867C3624718DD200BB74E1 /* GradientNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81867C3524718DD200BB74E1 /* GradientNavigationBar.swift */; };
 		81867C3824718FB500BB74E1 /* CreatePlanContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81867C3724718FB500BB74E1 /* CreatePlanContentView.swift */; };
+		81867C3C2471941600BB74E1 /* CreatePlanViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81867C3B2471941600BB74E1 /* CreatePlanViewModel.swift */; };
+		819DDF3C24719ADE00E143C0 /* FirebaseFirestoreService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819DDF3B24719ADE00E143C0 /* FirebaseFirestoreService.swift */; };
 		81A28E6C2470331C00975F8C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A28E6B2470331C00975F8C /* AppDelegate.swift */; };
 		81A28E6E2470331C00975F8C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A28E6D2470331C00975F8C /* SceneDelegate.swift */; };
 		81A28E752470332100975F8C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81A28E742470332100975F8C /* Assets.xcassets */; };
@@ -53,7 +55,7 @@
 		2F8AA2A90617C9F4D75D4622 /* Pods-VPlanTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VPlanTests.release.xcconfig"; path = "Target Support Files/Pods-VPlanTests/Pods-VPlanTests.release.xcconfig"; sourceTree = "<group>"; };
 		31AE7B85D981BAAB16EA8751 /* Pods-VPlan.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VPlan.release.xcconfig"; path = "Target Support Files/Pods-VPlan/Pods-VPlan.release.xcconfig"; sourceTree = "<group>"; };
 		810BE82E2470698E00C94650 /* Regex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Regex.swift; sourceTree = "<group>"; };
-		810BE831247077FC00C94650 /* FirebaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseService.swift; sourceTree = "<group>"; };
+		810BE831247077FC00C94650 /* FirebaseAuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAuthService.swift; sourceTree = "<group>"; };
 		810BE8382470838E00C94650 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		810BE83A2470839B00C94650 /* LoginContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginContentView.swift; sourceTree = "<group>"; };
 		810BE83C247083B000C94650 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
@@ -66,6 +68,8 @@
 		81867C3324718C5000BB74E1 /* CreatePlanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePlanView.swift; sourceTree = "<group>"; };
 		81867C3524718DD200BB74E1 /* GradientNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientNavigationBar.swift; sourceTree = "<group>"; };
 		81867C3724718FB500BB74E1 /* CreatePlanContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePlanContentView.swift; sourceTree = "<group>"; };
+		81867C3B2471941600BB74E1 /* CreatePlanViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePlanViewModel.swift; sourceTree = "<group>"; };
+		819DDF3B24719ADE00E143C0 /* FirebaseFirestoreService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseFirestoreService.swift; sourceTree = "<group>"; };
 		81A28E682470331C00975F8C /* VPlan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VPlan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		81A28E6B2470331C00975F8C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		81A28E6D2470331C00975F8C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -121,7 +125,8 @@
 		810BE830247077F100C94650 /* Firebase */ = {
 			isa = PBXGroup;
 			children = (
-				810BE831247077FC00C94650 /* FirebaseService.swift */,
+				810BE831247077FC00C94650 /* FirebaseAuthService.swift */,
+				819DDF3B24719ADE00E143C0 /* FirebaseFirestoreService.swift */,
 			);
 			path = Firebase;
 			sourceTree = "<group>";
@@ -334,6 +339,7 @@
 		81867C3224718B2600BB74E1 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				81867C3B2471941600BB74E1 /* CreatePlanViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -693,6 +699,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				819DDF3C24719ADE00E143C0 /* FirebaseFirestoreService.swift in Sources */,
 				810BE83B2470839B00C94650 /* LoginContentView.swift in Sources */,
 				81A28E6C2470331C00975F8C /* AppDelegate.swift in Sources */,
 				81A28E6E2470331C00975F8C /* SceneDelegate.swift in Sources */,
@@ -701,7 +708,8 @@
 				81867C3424718C5000BB74E1 /* CreatePlanView.swift in Sources */,
 				810BE8392470838E00C94650 /* LoginView.swift in Sources */,
 				81A28E98247034EC00975F8C /* WelcomeView.swift in Sources */,
-				810BE832247077FC00C94650 /* FirebaseService.swift in Sources */,
+				810BE832247077FC00C94650 /* FirebaseAuthService.swift in Sources */,
+				81867C3C2471941600BB74E1 /* CreatePlanViewModel.swift in Sources */,
 				81E7535324705724004B44EB /* RegisterContentView.swift in Sources */,
 				8152DE0F2470562C00BF85B2 /* RegisterView.swift in Sources */,
 				81F4657D247042B7000AA11E /* WelcomeContentView.swift in Sources */,

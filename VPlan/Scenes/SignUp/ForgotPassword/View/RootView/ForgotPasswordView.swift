@@ -38,8 +38,6 @@ class ForgotPasswordView: UIViewController {
         viewModel.resetPasswordErrorSubject.bind(to: rx.showMessageError).disposed(by: disposeBag)
         viewModel.resetPasswordSucessedPublishSubject.bind(to: rx.showMessageSuccess).disposed(by: disposeBag)
     }
-    
-    @objc fileprivate func moveKeyboard() {view.endEditing(true)}
 }
 
 extension Reactive where Base: ForgotPasswordView {
