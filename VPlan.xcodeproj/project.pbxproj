@@ -42,6 +42,7 @@
 		81867C3C2471941600BB74E1 /* CreatePlanViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81867C3B2471941600BB74E1 /* CreatePlanViewModel.swift */; };
 		819DDF3C24719ADE00E143C0 /* FirebaseFirestoreService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819DDF3B24719ADE00E143C0 /* FirebaseFirestoreService.swift */; };
 		81A1E58A24731BDF00E36D8E /* FeedPlanSceneTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A1E58924731BDF00E36D8E /* FeedPlanSceneTests.swift */; };
+		81A1E59024731F5200E36D8E /* ProfileSceneTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A1E58F24731F5200E36D8E /* ProfileSceneTests.swift */; };
 		81A28E6C2470331C00975F8C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A28E6B2470331C00975F8C /* AppDelegate.swift */; };
 		81A28E6E2470331C00975F8C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A28E6D2470331C00975F8C /* SceneDelegate.swift */; };
 		81A28E752470332100975F8C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81A28E742470332100975F8C /* Assets.xcassets */; };
@@ -106,6 +107,7 @@
 		81867C3B2471941600BB74E1 /* CreatePlanViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePlanViewModel.swift; sourceTree = "<group>"; };
 		819DDF3B24719ADE00E143C0 /* FirebaseFirestoreService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseFirestoreService.swift; sourceTree = "<group>"; };
 		81A1E58924731BDF00E36D8E /* FeedPlanSceneTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedPlanSceneTests.swift; sourceTree = "<group>"; };
+		81A1E58F24731F5200E36D8E /* ProfileSceneTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSceneTests.swift; sourceTree = "<group>"; };
 		81A28E682470331C00975F8C /* VPlan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VPlan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		81A28E6B2470331C00975F8C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		81A28E6D2470331C00975F8C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -524,6 +526,7 @@
 		81A1E58824731BC400E36D8E /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				81A1E58F24731F5200E36D8E /* ProfileSceneTests.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -950,6 +953,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8116B04F247311620066AAA1 /* CreatePlanSceneTests.swift in Sources */,
+				81A1E59024731F5200E36D8E /* ProfileSceneTests.swift in Sources */,
 				8116B04D24730BF40066AAA1 /* FirebaseFireStoreMock.swift in Sources */,
 				8116B0472472FBA80066AAA1 /* FirebaseAuthServiceMock.swift in Sources */,
 				81A1E58A24731BDF00E36D8E /* FeedPlanSceneTests.swift in Sources */,
