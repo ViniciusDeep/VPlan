@@ -57,10 +57,19 @@ class FeedPlanView: UIViewController {
             cell.feedCellContentView.setup(withPlan: plan)
             cell.feedCellContentView.newStatusSubject.bind(to: self.rx.updatePlan).disposed(by: self.disposeBag)
         }.disposed(by: disposeBag)
+        
+        viewModel.updatePlanSubject.bind(to: rx.reloadPlan).disposed(by: disposeBag)
+        
     }
 }
 
 extension Reactive where Base: FeedPlanView {
+    var reloadPlan: Binder<()> {
+        return Binder(base) { (view, _) in
+            view.viewModel?.fetchPlans()
+        }
+    }
+    
     var fetchPlan: Binder<(Bool)> {
         return Binder(base) { (view, isOpen) in
             view.viewModel?.isOpen = isOpen
@@ -71,7 +80,6 @@ extension Reactive where Base: FeedPlanView {
     var updatePlan: Binder<((Bool, String))> {
         return Binder(base) { (view, newValue) in
             view.viewModel?.updateStatus(status: newValue.0, uuid: newValue.1)
-            view.viewModel?.fetchPlans()
         }
     }
 }

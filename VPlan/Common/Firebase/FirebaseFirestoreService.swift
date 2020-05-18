@@ -71,6 +71,7 @@ struct FirebaseFireStoreService: CreatableFirebaseFireStoreService {
                         document.reference.updateData([
                             "isOpen": isOpen
                         ])
+                        onSuccess()
                     }
                 }
             }

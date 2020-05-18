@@ -242,6 +242,29 @@
 			path = SignUp;
 			sourceTree = "<group>";
 		};
+		8116B026247233330066AAA1 /* ForgotPassword */ = {
+			isa = PBXGroup;
+			children = (
+				8116B028247233D40066AAA1 /* ViewModel */,
+				8116B027247233BF0066AAA1 /* View */,
+			);
+			path = ForgotPassword;
+			sourceTree = "<group>";
+		};
+		8116B027247233BF0066AAA1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8116B028247233D40066AAA1 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		8152DE0524704F4B00BF85B2 /* Components */ = {
 			isa = PBXGroup;
 			children = (
@@ -455,9 +478,10 @@
 		81A28E93247034B600975F8C /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				81867C2A2471804B00BB74E1 /* CreatePlan */,
 				81867C292471803D00BB74E1 /* FeedPlan */,
+				81867C2A2471804B00BB74E1 /* CreatePlan */,
 				810BE84924709B8400C94650 /* SignUp */,
+				8116B026247233330066AAA1 /* ForgotPassword */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
