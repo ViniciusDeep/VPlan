@@ -19,20 +19,19 @@ enum MockError: Error {
 struct FirebaseAuthMockService: CreatableAuthFirebaseService {
     
     static let sutUID = "SutUID"
-    
     static let emailSut = "sut@gmail.com"
     static let nameSut = "SutUsername"
     
     func didRegisterUser(name: String, email: String, password: String, completion: @escaping (Result<Void, Error>) -> Void) {
         if name.count < 3 {return completion(.failure(MockError.genericError))}
         
-        if email.fieldIsValid(typeField: .email) && password.fieldIsValid(typeField: .password) {return completion(.failure(MockError.invalidField))}
+        if !email.fieldIsValid(typeField: .email) && !password.fieldIsValid(typeField: .password) {return completion(.failure(MockError.invalidField))}
         
         completion(.success(()))
     }
     
     func didLogin(email: String, password: String, completion: @escaping (Result<Void, Error>) -> Void) {
-        if email.fieldIsValid(typeField: .email) && password.fieldIsValid(typeField: .password) {return completion(.failure(MockError.invalidField))}
+        if !email.fieldIsValid(typeField: .email) && !password.fieldIsValid(typeField: .password) {return completion(.failure(MockError.invalidField))}
         completion(.success(()))
     }
     
