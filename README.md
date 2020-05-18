@@ -18,7 +18,3 @@ The project uses some concepts and technologies as listed below:
 * CI/CD
 * Unit Tests with XCTests
 * Cocoapods
-
-![presentation](https://user-images.githubusercontent.com/32227073/82269198-481fe900-9947-11ea-8be2-aa0b4363b95e.png)
-
-
