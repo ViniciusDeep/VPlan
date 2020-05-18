@@ -13,7 +13,6 @@ class FeedPlanContentView: UIView, ConfigurableView {
     let tableView = UITableView().then {
         $0.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         $0.register(FeedPlanTableViewCell.self, forCellReuseIdentifier: "cellId")
-        $0.rowHeight = 100
         $0.separatorStyle = .none
     }
     
