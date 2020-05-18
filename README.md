@@ -1,4 +1,4 @@
-# VPlan# VPlan
+# VPlan
 
 ![CI](https://github.com/ViniciusDeep/VPlan/workflows/CI/badge.svg)
 
