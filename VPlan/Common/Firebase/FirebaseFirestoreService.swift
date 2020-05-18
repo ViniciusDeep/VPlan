@@ -10,7 +10,7 @@ import FirebaseAuth
 import FirebaseFirestore
 
 protocol CreatableFirebaseFireStoreService {
-    func createPlan(title: String, description: String, details: String, onSuccess: @escaping () -> Void, onFailure: @escaping (Error) -> Void)
+    func createPlan(plan: Plan, onSuccess: @escaping () -> Void, onFailure: @escaping (Error) -> Void)
     func fetchPlans(completion: @escaping (Result<[Plan], Error>) -> Void)
 }
 
@@ -18,13 +18,13 @@ struct FirebaseFireStoreService: CreatableFirebaseFireStoreService {
     
     private let fireStore = Firestore.firestore()
     
-    func createPlan(title: String, description: String, details: String, onSuccess: @escaping () -> Void, onFailure: @escaping (Error) -> Void) {
+    func createPlan(plan: Plan, onSuccess: @escaping () -> Void, onFailure: @escaping (Error) -> Void) {
         fireStore.collection("users").document(FirebaseAuthService().getCurrentUserUID()).collection("plans")
             .addDocument(data: [
-            "title": title,
-            "description": description,
-            "details": details,
-            "isOpen": true
+            "title": plan.title,
+            "description": plan.description,
+            "details": plan.details,
+            "isOpen": plan.isOpen
         ]) { error in
             if let err = error {
                 onFailure(err)
@@ -54,6 +54,10 @@ struct FirebaseFireStoreService: CreatableFirebaseFireStoreService {
                         completion(.success(plans))
                 }
         }
+    }
+    
+    func updatePlan() {
+        
     }
 }
 

@@ -42,7 +42,7 @@ class MenuTabBarView: UIView, UICollectionViewDelegateFlowLayout, UICollectionVi
         menuCollectionView.selectItem(at: index, animated: true, scrollPosition: .init())
     }
     
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+    func collectionView(_ collectionView: UICollectionView, didHighlightItemAt indexPath: IndexPath) {
         indexPath.row == 0 ? self.actionMenuSubject.onNext(true) : self.actionMenuSubject.onNext(false)
         horizontalBarAnimation(indexPath: indexPath)
     }

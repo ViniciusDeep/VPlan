@@ -13,17 +13,11 @@ class MenuCell: UICollectionViewCell {
     let titleCell: UILabel = {
         let label = UILabel()
         label.lineBreakMode = .byWordWrapping
-        label.textColor = .lightGray
+        label.textColor = .white
         label.font = .boldSystemFont(ofSize: 18)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
-    
-    override var isSelected: Bool {
-        didSet {
-            titleCell.textColor = isSelected ? .white : .lightGray
-        }
-    }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
