@@ -13,6 +13,14 @@ import RxSwift
 class RegisterSceneTests: XCTestCase {
 
     let registerView = RegisterView(viewModel: RegisterViewModel(firebaseService: FirebaseAuthMockService()))
+    
+    func testWelcomeScene() {
+       let welcomeView = WelcomeView()
+        welcomeView.setupView()
+        welcomeView.setupContentView()
+        welcomeView.bindUI()
+        XCTAssertEqual(welcomeView.title, "Bem Vindo ao VPlan")
+    }
 
     func testFirebaseServiceAtViewModel() {
         registerView.bindViewModel()
