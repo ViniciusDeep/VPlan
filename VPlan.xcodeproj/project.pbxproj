@@ -22,6 +22,8 @@
 		8129905C2471E56A00C046C7 /* FeedPlanContentViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8129905B2471E56A00C046C7 /* FeedPlanContentViewCell.swift */; };
 		8129905E2471E78800C046C7 /* UITableView+Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8129905D2471E78800C046C7 /* UITableView+Animation.swift */; };
 		812990602471EEEB00C046C7 /* TrackLayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8129905F2471EEEB00C046C7 /* TrackLayerView.swift */; };
+		812990622472077B00C046C7 /* MenuCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812990612472077B00C046C7 /* MenuCollectionViewCell.swift */; };
+		812990642472088300C046C7 /* MenuBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812990632472088300C046C7 /* MenuBarView.swift */; };
 		8152DE0724704F6D00BF85B2 /* InteractionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8152DE0624704F6D00BF85B2 /* InteractionButton.swift */; };
 		8152DE0F2470562C00BF85B2 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8152DE0E2470562C00BF85B2 /* RegisterView.swift */; };
 		81867C302471808B00BB74E1 /* FeedPlanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81867C2F2471808B00BB74E1 /* FeedPlanView.swift */; };
@@ -74,6 +76,8 @@
 		8129905B2471E56A00C046C7 /* FeedPlanContentViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedPlanContentViewCell.swift; sourceTree = "<group>"; };
 		8129905D2471E78800C046C7 /* UITableView+Animation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Animation.swift"; sourceTree = "<group>"; };
 		8129905F2471EEEB00C046C7 /* TrackLayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackLayerView.swift; sourceTree = "<group>"; };
+		812990612472077B00C046C7 /* MenuCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCollectionViewCell.swift; sourceTree = "<group>"; };
+		812990632472088300C046C7 /* MenuBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBarView.swift; sourceTree = "<group>"; };
 		8152DE0624704F6D00BF85B2 /* InteractionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractionButton.swift; sourceTree = "<group>"; };
 		8152DE0E2470562C00BF85B2 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 		81867C2F2471808B00BB74E1 /* FeedPlanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedPlanView.swift; sourceTree = "<group>"; };
@@ -241,6 +245,8 @@
 		8152DE0524704F4B00BF85B2 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				812990612472077B00C046C7 /* MenuCollectionViewCell.swift */,
+				812990632472088300C046C7 /* MenuBarView.swift */,
 				8152DE0624704F6D00BF85B2 /* InteractionButton.swift */,
 				81E75354247058B0004B44EB /* InteractionTextField.swift */,
 				81867C3524718DD200BB74E1 /* GradientNavigationBar.swift */,
@@ -738,6 +744,7 @@
 				812990582471DEEA00C046C7 /* FeedPlanContentView.swift in Sources */,
 				81F465832470435A000AA11E /* ConfigurableView.swift in Sources */,
 				81F465812470433E000AA11E /* Then.swift in Sources */,
+				812990642472088300C046C7 /* MenuBarView.swift in Sources */,
 				8129905C2471E56A00C046C7 /* FeedPlanContentViewCell.swift in Sources */,
 				81867C3624718DD200BB74E1 /* GradientNavigationBar.swift in Sources */,
 				8129905E2471E78800C046C7 /* UITableView+Animation.swift in Sources */,
@@ -746,6 +753,7 @@
 				81867C3824718FB500BB74E1 /* CreatePlanContentView.swift in Sources */,
 				810BE8482470904800C94650 /* ForgotPasswordViewModel.swift in Sources */,
 				812990602471EEEB00C046C7 /* TrackLayerView.swift in Sources */,
+				812990622472077B00C046C7 /* MenuCollectionViewCell.swift in Sources */,
 				81A28E922470349A00975F8C /* Coordinator.swift in Sources */,
 				810BE84424708E5400C94650 /* ForgotPasswordView.swift in Sources */,
 				810BE82F2470698E00C94650 /* Regex.swift in Sources */,

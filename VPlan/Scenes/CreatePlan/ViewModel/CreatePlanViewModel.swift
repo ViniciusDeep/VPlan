@@ -38,7 +38,7 @@ struct CreatePlanViewModel {
     }
     
     func didCreatePlan() {
-        firebaseFireStoreService.createPlan(title: title.value, description: description.value, details: details.value, onSuccess: {
+        firebaseFireStoreService.createPlan(plan: Plan(description: description.value, title: title.value, isOpen: true, details: details.value, uuid: UUID().uuidString), onSuccess: {
             self.successCreatePlanSubject.onNext(())
         }) { (error) in
             self.errorCreatePlanSubject.onNext(error )

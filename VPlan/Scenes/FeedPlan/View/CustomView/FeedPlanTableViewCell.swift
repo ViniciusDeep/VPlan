@@ -16,6 +16,7 @@ class FeedPlanTableViewCell: UITableViewCell, ConfigurableView {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         buildViewHierarchy()
         setupConstraints()
+        selectionStyle = .none
     }
     
     required init?(coder: NSCoder) {
@@ -33,10 +34,5 @@ class FeedPlanTableViewCell: UITableViewCell, ConfigurableView {
             make.right.equalTo(snp.right).offset(-12)
             make.bottom.equalTo(snp.bottom).offset(-12)
         }
-    }
-    
-    func setup(withPlan plan: Plan) {
-        feedCellContentView.titleLabel.text = plan.title
-        feedCellContentView.descriptionLabel.text = plan.description
     }
 }

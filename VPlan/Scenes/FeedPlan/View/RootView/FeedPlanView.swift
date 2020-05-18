@@ -35,6 +35,7 @@ class FeedPlanView: UIViewController {
     
     func setupView() {
         view = contentView
+        navigationController?.navigationBar.shadowImage = UIImage()
         navigationController?.navigationBar.setupDefaultNavigationBar()
         navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .compose, target: self, action: nil)
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(didOpenCreatePlanView))
@@ -50,9 +51,27 @@ class FeedPlanView: UIViewController {
     
     func bindUI() {
         guard let viewModel = self.viewModel else {return}
+        contentView.menuView.actionMenuSubject.bind(to: rx.fetchPlan).disposed(by: disposeBag)
         viewModel.plansSubject.bind(to: contentView.tableView.rx.items(cellIdentifier: "cellId", cellType: FeedPlanTableViewCell.self)) { (_, plan, cell) in
             cell.animationToRight()
-            cell.setup(withPlan: plan)
+            cell.feedCellContentView.setup(withPlan: plan)
+            cell.feedCellContentView.newStatusSubject.bind(to: self.rx.updatePlan).disposed(by: self.disposeBag)
         }.disposed(by: disposeBag)
+    }
+}
+
+extension Reactive where Base: FeedPlanView {
+    var fetchPlan: Binder<(Bool)> {
+        return Binder(base) { (view, isOpen) in
+            view.viewModel?.isOpen = isOpen
+            view.viewModel?.fetchPlans()
+        }
+    }
+    
+    var updatePlan: Binder<((Bool, String))> {
+        return Binder(base) { (view, newValue) in
+            view.viewModel?.updateStatus(status: newValue.0, uuid: newValue.1)
+            view.viewModel?.fetchPlans()
+        }
     }
 }
