@@ -14,7 +14,7 @@ struct FeedPlanViewModel {
     
     let plansSubject = PublishSubject<[Plan]>()
     
-    let errorSubject = PublishSubject<Error>()
+    let errorPlanSubject = PublishSubject<Error>()
     
     let updatePlanSubject = PublishSubject<Void>()
     
@@ -28,7 +28,7 @@ struct FeedPlanViewModel {
         firebaseFireStoreService.fetchPlans { (result) in
             switch result {
             case .failure(let error):
-                self.errorSubject.onNext(error)
+                self.errorPlanSubject.onNext(error)
             case .success(let plans):
                 self.plansSubject.onNext(plans.filter { $0.isOpen == self.isOpen})
             }
@@ -39,7 +39,7 @@ struct FeedPlanViewModel {
         firebaseFireStoreService.updateStatePlan(isOpen: status, uuid: uuid, onSuccess: {
             self.updatePlanSubject.onNext(())
         }) { (error) in
-            self.updatePlanSubject.onError(error)
+            self.errorPlanSubject.onNext(error)
         }
     }
 }

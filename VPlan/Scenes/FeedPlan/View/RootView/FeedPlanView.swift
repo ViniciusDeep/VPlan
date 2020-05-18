@@ -37,7 +37,7 @@ class FeedPlanView: UIViewController {
         view = contentView
         navigationController?.navigationBar.shadowImage = UIImage()
         navigationController?.navigationBar.setupDefaultNavigationBar()
-        navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .compose, target: self, action: nil)
+        navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .compose, target: self, action: #selector(didOpenLogoutView))
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(didOpenCreatePlanView))
         title = "Suas Pautas"
         view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(moveKeyboard)))
@@ -49,6 +49,12 @@ class FeedPlanView: UIViewController {
         self.present(feedPlanView, animated: true, completion: nil)
     }
     
+    @objc func didOpenLogoutView() {
+        let profileView = UINavigationController(rootViewController: ProfileView(viewModel: ProfileViewModel(firebaseAuthService: FirebaseAuthService())))
+        profileView.modalPresentationStyle = .fullScreen
+        self.present(profileView, animated: true, completion: nil)
+    }
+
     func bindUI() {
         guard let viewModel = self.viewModel else {return}
         contentView.menuView.actionMenuSubject.bind(to: rx.fetchPlan).disposed(by: disposeBag)
@@ -57,10 +63,19 @@ class FeedPlanView: UIViewController {
             cell.feedCellContentView.setup(withPlan: plan)
             cell.feedCellContentView.newStatusSubject.bind(to: self.rx.updatePlan).disposed(by: self.disposeBag)
         }.disposed(by: disposeBag)
+        
+        viewModel.updatePlanSubject.bind(to: rx.reloadPlan).disposed(by: disposeBag)
+        
     }
 }
 
 extension Reactive where Base: FeedPlanView {
+    var reloadPlan: Binder<()> {
+        return Binder(base) { (view, _) in
+            view.viewModel?.fetchPlans()
+        }
+    }
+    
     var fetchPlan: Binder<(Bool)> {
         return Binder(base) { (view, isOpen) in
             view.viewModel?.isOpen = isOpen
@@ -71,7 +86,6 @@ extension Reactive where Base: FeedPlanView {
     var updatePlan: Binder<((Bool, String))> {
         return Binder(base) { (view, newValue) in
             view.viewModel?.updateStatus(status: newValue.0, uuid: newValue.1)
-            view.viewModel?.fetchPlans()
         }
     }
 }

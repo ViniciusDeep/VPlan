@@ -5,7 +5,6 @@
 //  Created by Vinicius Mangueira on 16/05/20.
 //  Copyright © 2020 Vinicius Mangueira. All rights reserved.
 //
-
 import SnapKit
 import RxCocoa
 import RxSwift

@@ -13,6 +13,9 @@ protocol CreatableAuthFirebaseService {
     func didRegisterUser(name: String, email: String, password: String, completion: @escaping (Result<AuthDataResult, Error>) -> Void)
     func didLogin(email: String, password: String, completion: @escaping (Result<AuthDataResult, Error>) -> Void)
     func sendToResetPassword(email: String, onSuccess: @escaping () -> Void, onError: @escaping (Error) -> Void)
+    func getCurrentUserUID() -> String
+    func didLogoutUser(completion: (Error?) -> Void)
+    func getUserInfo(completion: @escaping (Result<((email: String, name: String)), Error>) -> Void)
 }
 
 
@@ -23,6 +26,18 @@ struct FirebaseAuthService: CreatableAuthFirebaseService {
     let fireStore = Firestore.firestore()
     
     func getCurrentUserUID() -> String {auth.currentUser?.uid ?? ""}
+    
+    func getUserInfo(completion: @escaping (Result<((email: String, name: String)), Error>) -> Void) {
+            fireStore.collection("users")
+            .document(self.getCurrentUserUID())
+            .collection("user_info")
+            .getDocuments { (snapShot, error) in
+            
+            if let err = error {completion(.failure(err))}
+            let name = snapShot?.documents.first?.data()["name"] as? String ?? ""
+            completion(.success((self.auth.currentUser?.email ?? "", name)))
+        }
+    }
     
     func didRegisterUser(name: String, email: String, password: String, completion: @escaping (Result<AuthDataResult, Error>) -> Void) {
         self.auth.createUser(withEmail: email, password: password) { (result, error) in
@@ -68,6 +83,15 @@ struct FirebaseAuthService: CreatableAuthFirebaseService {
             } else {
                 onSuccess()
             }
+        }
+    }
+    
+    func didLogoutUser(completion: (Error?) -> Void) {
+        do {
+           try auth.signOut()
+            completion(nil)
+        } catch {
+            completion(error)
         }
     }
 }

@@ -16,6 +16,9 @@
 		810BE84424708E5400C94650 /* ForgotPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810BE84324708E5400C94650 /* ForgotPasswordView.swift */; };
 		810BE84624708F9400C94650 /* ForgotPasswordContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810BE84524708F9400C94650 /* ForgotPasswordContentView.swift */; };
 		810BE8482470904800C94650 /* ForgotPasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810BE8472470904800C94650 /* ForgotPasswordViewModel.swift */; };
+		8116B035247238AE0066AAA1 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8116B034247238AE0066AAA1 /* ProfileView.swift */; };
+		8116B037247238B80066AAA1 /* ProfileContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8116B036247238B80066AAA1 /* ProfileContentView.swift */; };
+		8116B03924723AB50066AAA1 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8116B03824723AB50066AAA1 /* ProfileViewModel.swift */; };
 		812990562471D8F000C046C7 /* FeedPlanViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812990552471D8F000C046C7 /* FeedPlanViewModel.swift */; };
 		812990582471DEEA00C046C7 /* FeedPlanContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812990572471DEEA00C046C7 /* FeedPlanContentView.swift */; };
 		8129905A2471E02300C046C7 /* FeedPlanTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812990592471E02300C046C7 /* FeedPlanTableViewCell.swift */; };
@@ -70,6 +73,9 @@
 		810BE84324708E5400C94650 /* ForgotPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordView.swift; sourceTree = "<group>"; };
 		810BE84524708F9400C94650 /* ForgotPasswordContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordContentView.swift; sourceTree = "<group>"; };
 		810BE8472470904800C94650 /* ForgotPasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewModel.swift; sourceTree = "<group>"; };
+		8116B034247238AE0066AAA1 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		8116B036247238B80066AAA1 /* ProfileContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileContentView.swift; sourceTree = "<group>"; };
+		8116B03824723AB50066AAA1 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		812990552471D8F000C046C7 /* FeedPlanViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedPlanViewModel.swift; sourceTree = "<group>"; };
 		812990572471DEEA00C046C7 /* FeedPlanContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedPlanContentView.swift; sourceTree = "<group>"; };
 		812990592471E02300C046C7 /* FeedPlanTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedPlanTableViewCell.swift; sourceTree = "<group>"; };
@@ -240,6 +246,48 @@
 				81A28E94247034CB00975F8C /* Welcome */,
 			);
 			path = SignUp;
+			sourceTree = "<group>";
+		};
+		8116B02F247238100066AAA1 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				8116B031247238580066AAA1 /* ViewModel */,
+				8116B030247238540066AAA1 /* View */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		8116B030247238540066AAA1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8116B033247238A10066AAA1 /* CustomView */,
+				8116B0322472389A0066AAA1 /* RootView */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8116B031247238580066AAA1 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				8116B03824723AB50066AAA1 /* ProfileViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		8116B0322472389A0066AAA1 /* RootView */ = {
+			isa = PBXGroup;
+			children = (
+				8116B034247238AE0066AAA1 /* ProfileView.swift */,
+			);
+			path = RootView;
+			sourceTree = "<group>";
+		};
+		8116B033247238A10066AAA1 /* CustomView */ = {
+			isa = PBXGroup;
+			children = (
+				8116B036247238B80066AAA1 /* ProfileContentView.swift */,
+			);
+			path = CustomView;
 			sourceTree = "<group>";
 		};
 		8152DE0524704F4B00BF85B2 /* Components */ = {
@@ -455,8 +503,9 @@
 		81A28E93247034B600975F8C /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				81867C2A2471804B00BB74E1 /* CreatePlan */,
 				81867C292471803D00BB74E1 /* FeedPlan */,
+				81867C2A2471804B00BB74E1 /* CreatePlan */,
+				8116B02F247238100066AAA1 /* Profile */,
 				810BE84924709B8400C94650 /* SignUp */,
 			);
 			path = Scenes;
@@ -735,11 +784,13 @@
 				81A28E98247034EC00975F8C /* WelcomeView.swift in Sources */,
 				810BE832247077FC00C94650 /* FirebaseAuthService.swift in Sources */,
 				81867C3C2471941600BB74E1 /* CreatePlanViewModel.swift in Sources */,
+				8116B035247238AE0066AAA1 /* ProfileView.swift in Sources */,
 				812990562471D8F000C046C7 /* FeedPlanViewModel.swift in Sources */,
 				81E7535324705724004B44EB /* RegisterContentView.swift in Sources */,
 				8152DE0F2470562C00BF85B2 /* RegisterView.swift in Sources */,
 				81F4657D247042B7000AA11E /* WelcomeContentView.swift in Sources */,
 				810BE83D247083B000C94650 /* LoginViewModel.swift in Sources */,
+				8116B037247238B80066AAA1 /* ProfileContentView.swift in Sources */,
 				81E7535924706523004B44EB /* RegisterViewModel.swift in Sources */,
 				812990582471DEEA00C046C7 /* FeedPlanContentView.swift in Sources */,
 				81F465832470435A000AA11E /* ConfigurableView.swift in Sources */,
@@ -747,6 +798,7 @@
 				812990642472088300C046C7 /* MenuBarView.swift in Sources */,
 				8129905C2471E56A00C046C7 /* FeedPlanContentViewCell.swift in Sources */,
 				81867C3624718DD200BB74E1 /* GradientNavigationBar.swift in Sources */,
+				8116B03924723AB50066AAA1 /* ProfileViewModel.swift in Sources */,
 				8129905E2471E78800C046C7 /* UITableView+Animation.swift in Sources */,
 				8152DE0724704F6D00BF85B2 /* InteractionButton.swift in Sources */,
 				810BE84624708F9400C94650 /* ForgotPasswordContentView.swift in Sources */,
