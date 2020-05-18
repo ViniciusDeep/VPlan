@@ -24,6 +24,7 @@
 		8116B049247303270066AAA1 /* RegisterSceneTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8116B048247303270066AAA1 /* RegisterSceneTests.swift */; };
 		8116B04B247306E90066AAA1 /* LoginSceneTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8116B04A247306E90066AAA1 /* LoginSceneTests.swift */; };
 		8116B04D24730BF40066AAA1 /* FirebaseFireStoreMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8116B04C24730BF40066AAA1 /* FirebaseFireStoreMock.swift */; };
+		8116B04F247311620066AAA1 /* CreatePlanSceneTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8116B04E247311620066AAA1 /* CreatePlanSceneTests.swift */; };
 		812990562471D8F000C046C7 /* FeedPlanViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812990552471D8F000C046C7 /* FeedPlanViewModel.swift */; };
 		812990582471DEEA00C046C7 /* FeedPlanContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812990572471DEEA00C046C7 /* FeedPlanContentView.swift */; };
 		8129905A2471E02300C046C7 /* FeedPlanTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812990592471E02300C046C7 /* FeedPlanTableViewCell.swift */; };
@@ -86,6 +87,7 @@
 		8116B048247303270066AAA1 /* RegisterSceneTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterSceneTests.swift; sourceTree = "<group>"; };
 		8116B04A247306E90066AAA1 /* LoginSceneTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginSceneTests.swift; sourceTree = "<group>"; };
 		8116B04C24730BF40066AAA1 /* FirebaseFireStoreMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseFireStoreMock.swift; sourceTree = "<group>"; };
+		8116B04E247311620066AAA1 /* CreatePlanSceneTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePlanSceneTests.swift; sourceTree = "<group>"; };
 		812990552471D8F000C046C7 /* FeedPlanViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedPlanViewModel.swift; sourceTree = "<group>"; };
 		812990572471DEEA00C046C7 /* FeedPlanContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedPlanContentView.swift; sourceTree = "<group>"; };
 		812990592471E02300C046C7 /* FeedPlanTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedPlanTableViewCell.swift; sourceTree = "<group>"; };
@@ -339,6 +341,7 @@
 		8116B03F2472EE710066AAA1 /* CreatePlan */ = {
 			isa = PBXGroup;
 			children = (
+				8116B04E247311620066AAA1 /* CreatePlanSceneTests.swift */,
 			);
 			path = CreatePlan;
 			sourceTree = "<group>";
@@ -903,6 +906,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8116B04F247311620066AAA1 /* CreatePlanSceneTests.swift in Sources */,
 				8116B04D24730BF40066AAA1 /* FirebaseFireStoreMock.swift in Sources */,
 				8116B0472472FBA80066AAA1 /* FirebaseAuthServiceMock.swift in Sources */,
 				8116B04B247306E90066AAA1 /* LoginSceneTests.swift in Sources */,
