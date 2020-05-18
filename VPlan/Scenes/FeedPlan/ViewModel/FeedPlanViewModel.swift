@@ -16,6 +16,8 @@ struct FeedPlanViewModel {
     
     let errorSubject = PublishSubject<Error>()
     
+    let updatePlanSubject = PublishSubject<Void>()
+    
     let firebaseFireStoreService: CreatableFirebaseFireStoreService
     
     init(firebaseFireStoreService: CreatableFirebaseFireStoreService) {
@@ -30,6 +32,14 @@ struct FeedPlanViewModel {
             case .success(let plans):
                 self.plansSubject.onNext(plans.filter { $0.isOpen == self.isOpen})
             }
+        }
+    }
+    
+    func updateStatus(status: Bool, uuid: String) {
+        firebaseFireStoreService.updateStatePlan(isOpen: status, uuid: uuid, onSuccess: {
+            self.updatePlanSubject.onNext(())
+        }) { (error) in
+            self.updatePlanSubject.onError(error)
         }
     }
 }

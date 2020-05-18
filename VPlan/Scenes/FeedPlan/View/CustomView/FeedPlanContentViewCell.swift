@@ -38,6 +38,9 @@ class FeedPlanContentViewCell: UIView, ConfigurableView {
         }
     }
     
+    let newStatusSubject = PublishSubject<(Bool, String)>()
+    
+    private var uuid = ""
   
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -97,11 +100,13 @@ class FeedPlanContentViewCell: UIView, ConfigurableView {
     
     @objc func didTapOnCheckBox() {
         status = !status
+        newStatusSubject.onNext((status, uuid))
     }
     
     func setup(withPlan plan: Plan) {
         self.titleLabel.text = plan.title
         self.descriptionLabel.text = plan.description
         self.status = plan.isOpen
+        self.uuid = plan.uuid
     }
 }
