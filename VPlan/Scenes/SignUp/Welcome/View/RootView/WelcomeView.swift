@@ -23,17 +23,17 @@ class WelcomeView: UIViewController {
         bindUI()
     }
     
-    fileprivate func setupView() {
+    func setupView() {
         view.backgroundColor = .white
         title = "Bem Vindo ao VPlan"
         navigationController?.navigationBar.prefersLargeTitles = true
     }
 
-    fileprivate func setupContentView() {
+    func setupContentView() {
         view = welcomeContentView
     }
     
-    fileprivate func bindUI() {
+    func bindUI() {
         welcomeContentView.registerButton.rx.tap.bind(to: rx.moveToRegister).disposed(by: disposeBag)
         welcomeContentView.loginButton.rx.tap.bind(to: rx.moveToSignIn).disposed(by: disposeBag)
         welcomeContentView.forgotPassowrdLabelSubject.bind(to: rx.moveToResetPassword).disposed(by: disposeBag)

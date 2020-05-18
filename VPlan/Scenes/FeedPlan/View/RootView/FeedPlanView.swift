@@ -63,12 +63,7 @@ class FeedPlanView: UIViewController {
             cell.feedCellContentView.setup(withPlan: plan)
             cell.feedCellContentView.newStatusSubject.bind(to: self.rx.updatePlan).disposed(by: self.disposeBag)
         }.disposed(by: disposeBag)
-        
-        
-        
-        
         viewModel.updatePlanSubject.bind(to: rx.reloadPlan).disposed(by: disposeBag)
-        
     }
 }
 

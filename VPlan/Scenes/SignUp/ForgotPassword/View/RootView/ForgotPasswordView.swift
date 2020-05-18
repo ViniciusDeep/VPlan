@@ -26,7 +26,7 @@ class ForgotPasswordView: UIViewController {
         bindViewModel()
     }
     
-    fileprivate func setupView() {
+    func setupView() {
         view = contentView
         view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(moveKeyboard)))
     }
