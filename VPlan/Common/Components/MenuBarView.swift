@@ -6,10 +6,13 @@
 //  Copyright © 2020 Vinicius Mangueira. All rights reserved.
 //
 
-import UIKit
+import RxCocoa
+import RxSwift
 
 class MenuTabBarView: UIView, UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
 
+    let actionMenuSubject = PublishSubject<Bool>()
+    
     var horizontalBarLeftAnchorConstraint: NSLayoutConstraint?
     
     lazy var menuCollectionView: UICollectionView = {
@@ -20,7 +23,6 @@ class MenuTabBarView: UIView, UICollectionViewDelegateFlowLayout, UICollectionVi
         collection.translatesAutoresizingMaskIntoConstraints = false
         collection.backgroundColor = #colorLiteral(red: 0.03137254902, green: 0.3411764706, blue: 0.6705882353, alpha: 1)
         collection.isScrollEnabled = false
-
         return collection
     }()
     
@@ -41,6 +43,7 @@ class MenuTabBarView: UIView, UICollectionViewDelegateFlowLayout, UICollectionVi
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        indexPath.row == 0 ? self.actionMenuSubject.onNext(true) : self.actionMenuSubject.onNext(false)
         horizontalBarAnimation(indexPath: indexPath)
     }
     

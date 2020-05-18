@@ -51,9 +51,20 @@ class FeedPlanView: UIViewController {
     
     func bindUI() {
         guard let viewModel = self.viewModel else {return}
+        contentView.menuView.actionMenuSubject.bind(to: rx.fetchPlan).disposed(by: disposeBag)
+        
         viewModel.plansSubject.bind(to: contentView.tableView.rx.items(cellIdentifier: "cellId", cellType: FeedPlanTableViewCell.self)) { (_, plan, cell) in
             cell.animationToRight()
             cell.feedCellContentView.setup(withPlan: plan)
         }.disposed(by: disposeBag)
+    }
+}
+
+extension Reactive where Base: FeedPlanView {
+    var fetchPlan: Binder<(Bool)> {
+        return Binder(base) { (view, isOpen) in
+            view.viewModel?.isOpen = isOpen
+            view.viewModel?.fetchPlans()
+        }
     }
 }
