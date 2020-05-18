@@ -17,3 +17,12 @@ lane :tests do
             devices: ["iPhone 8"],
             scheme: "VPlan")
 end
+
+lane :distribution do
+     firebase_app_distribution(
+              app: "1:842460145206:ios:5ed71eb01f4b09647d1a97",
+              groups: "testers",
+              ipa_path: "./VPlan.ipa"
+         )
+end
+

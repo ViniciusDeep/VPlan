@@ -25,6 +25,11 @@ fastlane pod
 fastlane tests
 ```
 
+### distribution
+```
+fastlane distribution
+```
+
 
 ----
 
