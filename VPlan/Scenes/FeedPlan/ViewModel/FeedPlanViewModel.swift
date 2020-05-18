@@ -10,7 +10,6 @@ import RxSwift
 import RxCocoa
 
 struct FeedPlanViewModel {
-    
     let plansSubject = PublishSubject<[Plan]>()
     
     let errorSubject = PublishSubject<Error>()
@@ -21,13 +20,13 @@ struct FeedPlanViewModel {
         self.firebaseFireStoreService = firebaseFireStoreService
     }
     
-    func fetchPlans() {
+    func fetchPlans(isOpen: Bool = true) {
         firebaseFireStoreService.fetchPlans { (result) in
             switch result {
             case .failure(let error):
                 self.errorSubject.onNext(error)
             case .success(let plans):
-                self.plansSubject.onNext(plans)
+                self.plansSubject.onNext(plans.filter { $0.isOpen == isOpen})
             }
         }
     }

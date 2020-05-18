@@ -17,8 +17,11 @@ class FeedPlanContentView: UIView, ConfigurableView {
         $0.separatorStyle = .none
     }
     
+    let menuView = MenuTabBarView()
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
+        backgroundColor = .white
         buildViewHierarchy()
         setupConstraints()
     }
@@ -28,12 +31,20 @@ class FeedPlanContentView: UIView, ConfigurableView {
     }
     
     func buildViewHierarchy() {
+           addSubview(menuView)
            addSubview(tableView)
     }
        
     func setupConstraints() {
+        menuView.snp.makeConstraints { (make) in
+            make.top.equalTo(snp.top).offset(70)
+            make.left.equalTo(snp.left)
+            make.right.equalTo(snp.right)
+            make.height.equalTo(60)
+        }
+        
         tableView.snp.makeConstraints { (make) in
-            make.top.equalTo(snp.top)
+            make.top.equalTo(menuView.snp.bottom).offset(10)
             make.left.equalTo(snp.left)
             make.right.equalTo(snp.right)
             make.bottom.equalTo(snp.bottom)

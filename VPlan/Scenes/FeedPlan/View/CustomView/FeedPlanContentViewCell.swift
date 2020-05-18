@@ -7,6 +7,8 @@
 //
 
 import SnapKit
+import RxSwift
+import RxCocoa
 
 class FeedPlanContentViewCell: UIView, ConfigurableView {
     
@@ -23,6 +25,19 @@ class FeedPlanContentViewCell: UIView, ConfigurableView {
         $0.lineBreakMode = .byWordWrapping
         $0.numberOfLines = 0
     }
+    
+    lazy var checkButton = UIButton().then {
+        $0.setImage(#imageLiteral(resourceName: "iconUnCheckedBox"), for: .normal)
+        $0.contentMode = .scaleAspectFit
+        $0.addTarget(self, action: #selector(didTapOnCheckBox), for: .touchUpInside)
+    }
+    
+    var status = false {
+        didSet {
+            status ? checkButton.setImage(#imageLiteral(resourceName: "iconUnCheckedBox"), for: .normal) : checkButton.setImage(#imageLiteral(resourceName: "iconCheckedBox"), for: .normal)
+        }
+    }
+    
   
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -48,6 +63,7 @@ class FeedPlanContentViewCell: UIView, ConfigurableView {
        addSubview(trackLayerView)
        addSubview(titleLabel)
        addSubview(descriptionLabel)
+       addSubview(checkButton)
     }
        
     func setupConstraints() {
@@ -61,14 +77,31 @@ class FeedPlanContentViewCell: UIView, ConfigurableView {
         titleLabel.snp.makeConstraints { (make) in
             make.top.equalTo(snp.top).offset(8)
             make.left.equalTo(trackLayerView.snp.right).offset(18)
-            make.right.equalTo(snp.right).offset(-8)
+            make.right.equalTo(checkButton.snp.left).offset(-8)
         }
         
         descriptionLabel.snp.makeConstraints { (make) in
             make.top.equalTo(titleLabel.snp.bottom).offset(4)
             make.left.equalTo(trackLayerView.snp.right).offset(18)
-            make.right.equalTo(snp.right).offset(-8)
+            make.right.equalTo(checkButton.snp.left).offset(-8)
             make.bottom.equalTo(snp.bottom).offset(-12)
         }
+        
+        checkButton.snp.makeConstraints { (make) in
+            make.centerY.equalTo(snp.centerY)
+            make.height.equalTo(24)
+            make.width.equalTo(24)
+            make.right.equalTo(snp.right).offset(-24)
+        }
+    }
+    
+    @objc func didTapOnCheckBox() {
+        status = !status
+    }
+    
+    func setup(withPlan plan: Plan) {
+        self.titleLabel.text = plan.title
+        self.descriptionLabel.text = plan.description
+        self.status = plan.isOpen
     }
 }

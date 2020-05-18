@@ -35,6 +35,7 @@ class FeedPlanView: UIViewController {
     
     func setupView() {
         view = contentView
+        navigationController?.navigationBar.shadowImage = UIImage()
         navigationController?.navigationBar.setupDefaultNavigationBar()
         navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .compose, target: self, action: nil)
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(didOpenCreatePlanView))
@@ -52,7 +53,7 @@ class FeedPlanView: UIViewController {
         guard let viewModel = self.viewModel else {return}
         viewModel.plansSubject.bind(to: contentView.tableView.rx.items(cellIdentifier: "cellId", cellType: FeedPlanTableViewCell.self)) { (_, plan, cell) in
             cell.animationToRight()
-            cell.setup(withPlan: plan)
+            cell.feedCellContentView.setup(withPlan: plan)
         }.disposed(by: disposeBag)
     }
 }
