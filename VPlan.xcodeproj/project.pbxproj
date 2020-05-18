@@ -44,11 +44,11 @@
 		81A1E58A24731BDF00E36D8E /* FeedPlanSceneTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A1E58924731BDF00E36D8E /* FeedPlanSceneTests.swift */; };
 		81A1E59024731F5200E36D8E /* ProfileSceneTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A1E58F24731F5200E36D8E /* ProfileSceneTests.swift */; };
 		81A1E5932473217C00E36D8E /* ForgotPasswordSceneTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A1E5922473217C00E36D8E /* ForgotPasswordSceneTests.swift */; };
+		81A1E5962473233B00E36D8E /* TestComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A1E5952473233B00E36D8E /* TestComponents.swift */; };
 		81A28E6C2470331C00975F8C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A28E6B2470331C00975F8C /* AppDelegate.swift */; };
 		81A28E6E2470331C00975F8C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A28E6D2470331C00975F8C /* SceneDelegate.swift */; };
 		81A28E752470332100975F8C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81A28E742470332100975F8C /* Assets.xcassets */; };
 		81A28E782470332100975F8C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81A28E762470332100975F8C /* LaunchScreen.storyboard */; };
-		81A28E832470332100975F8C /* VPlanTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A28E822470332100975F8C /* VPlanTests.swift */; };
 		81A28E922470349A00975F8C /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A28E912470349A00975F8C /* Coordinator.swift */; };
 		81A28E98247034EC00975F8C /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A28E97247034EC00975F8C /* WelcomeView.swift */; };
 		81A28E9A247039C200975F8C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 81A28E99247039C200975F8C /* GoogleService-Info.plist */; };
@@ -110,6 +110,7 @@
 		81A1E58924731BDF00E36D8E /* FeedPlanSceneTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedPlanSceneTests.swift; sourceTree = "<group>"; };
 		81A1E58F24731F5200E36D8E /* ProfileSceneTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSceneTests.swift; sourceTree = "<group>"; };
 		81A1E5922473217C00E36D8E /* ForgotPasswordSceneTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordSceneTests.swift; sourceTree = "<group>"; };
+		81A1E5952473233B00E36D8E /* TestComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestComponents.swift; sourceTree = "<group>"; };
 		81A28E682470331C00975F8C /* VPlan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VPlan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		81A28E6B2470331C00975F8C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		81A28E6D2470331C00975F8C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -117,7 +118,6 @@
 		81A28E772470332100975F8C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		81A28E792470332100975F8C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		81A28E7E2470332100975F8C /* VPlanTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VPlanTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		81A28E822470332100975F8C /* VPlanTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VPlanTests.swift; sourceTree = "<group>"; };
 		81A28E842470332100975F8C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		81A28E912470349A00975F8C /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		81A28E97247034EC00975F8C /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
@@ -576,6 +576,14 @@
 			path = ForgotPassword;
 			sourceTree = "<group>";
 		};
+		81A1E5942473232000E36D8E /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				81A1E5952473233B00E36D8E /* TestComponents.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		81A28E5F2470331C00975F8C = {
 			isa = PBXGroup;
 			children = (
@@ -615,7 +623,7 @@
 			children = (
 				8116B03B2472EDE00066AAA1 /* Scenes */,
 				8116B03A2472EDD20066AAA1 /* Commom */,
-				81A28E822470332100975F8C /* VPlanTests.swift */,
+				81A1E5942473232000E36D8E /* Components */,
 				81A28E842470332100975F8C /* Info.plist */,
 			);
 			path = VPlanTests;
@@ -965,13 +973,13 @@
 			files = (
 				81A1E5932473217C00E36D8E /* ForgotPasswordSceneTests.swift in Sources */,
 				8116B04F247311620066AAA1 /* CreatePlanSceneTests.swift in Sources */,
+				81A1E5962473233B00E36D8E /* TestComponents.swift in Sources */,
 				81A1E59024731F5200E36D8E /* ProfileSceneTests.swift in Sources */,
 				8116B04D24730BF40066AAA1 /* FirebaseFireStoreMock.swift in Sources */,
 				8116B0472472FBA80066AAA1 /* FirebaseAuthServiceMock.swift in Sources */,
 				81A1E58A24731BDF00E36D8E /* FeedPlanSceneTests.swift in Sources */,
 				8116B04B247306E90066AAA1 /* LoginSceneTests.swift in Sources */,
 				8116B049247303270066AAA1 /* RegisterSceneTests.swift in Sources */,
-				81A28E832470332100975F8C /* VPlanTests.swift in Sources */,
 				8116B0442472EF0C0066AAA1 /* RegexTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

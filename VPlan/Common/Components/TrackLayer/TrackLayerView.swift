@@ -33,7 +33,7 @@ class TrackLayerView: UIView {
          setupTrackLayer()
      }
     
-    fileprivate func setupTrackLayer() {
+    func setupTrackLayer() {
         let circularPath = UIBezierPath(arcCenter: CGPoint(x: 0, y: 0), radius: 20, startAngle: 0, endAngle: 3 * CGFloat.pi, clockwise: true)
         trackLayer.speed = 0.5
         trackLayer.strokeStart = 0
