@@ -10,8 +10,8 @@ import FirebaseAuth
 import FirebaseFirestore
 
 protocol CreatableAuthFirebaseService {
-    func didRegisterUser(name: String, email: String, password: String, completion: @escaping (Result<AuthDataResult, Error>) -> Void)
-    func didLogin(email: String, password: String, completion: @escaping (Result<AuthDataResult, Error>) -> Void)
+    func didRegisterUser(name: String, email: String, password: String, completion: @escaping (Result<Void, Error>) -> Void)
+    func didLogin(email: String, password: String, completion: @escaping (Result<Void, Error>) -> Void)
     func sendToResetPassword(email: String, onSuccess: @escaping () -> Void, onError: @escaping (Error) -> Void)
     func getCurrentUserUID() -> String
     func didLogoutUser(completion: (Error?) -> Void)
@@ -39,7 +39,7 @@ struct FirebaseAuthService: CreatableAuthFirebaseService {
         }
     }
     
-    func didRegisterUser(name: String, email: String, password: String, completion: @escaping (Result<AuthDataResult, Error>) -> Void) {
+    func didRegisterUser(name: String, email: String, password: String, completion: @escaping (Result<Void, Error>) -> Void) {
         self.auth.createUser(withEmail: email, password: password) { (result, error) in
             if let err = error {
                 completion(.failure(err))
@@ -59,19 +59,19 @@ struct FirebaseAuthService: CreatableAuthFirebaseService {
                         print("Document added with ID: \(ref!.documentID)")
                         }
                     }
-                    completion(.success(result))
+                    completion(.success(()))
                 }
             }
     }
     
-    func didLogin(email: String, password: String, completion: @escaping (Result<AuthDataResult, Error>) -> Void) {
+    func didLogin(email: String, password: String, completion: @escaping (Result<Void, Error>) -> Void) {
         auth.signIn(withEmail: email, password: password) { authResult, error in
           if let err = error {
               completion(.failure(err))
           }
           
-          if let result = authResult {
-                completion(.success(result))
+            if authResult != nil {
+                completion(.success(()))
             }
         }
     }

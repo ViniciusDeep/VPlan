@@ -23,7 +23,7 @@ struct RegisterViewModel {
     let name = BehaviorRelay<String>(value: "")
     let firebaseService: CreatableAuthFirebaseService
     
-    let userCreatedPublishSubject = PublishSubject<AuthDataResult>()
+    let userCreatedPublishSubject = PublishSubject<Void>()
     let userCreatedError = PublishSubject<Error>()
       
     var isValid: Observable<Bool>

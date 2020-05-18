@@ -20,6 +20,7 @@
 		8116B037247238B80066AAA1 /* ProfileContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8116B036247238B80066AAA1 /* ProfileContentView.swift */; };
 		8116B03924723AB50066AAA1 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8116B03824723AB50066AAA1 /* ProfileViewModel.swift */; };
 		8116B0442472EF0C0066AAA1 /* RegexTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8116B0432472EF0C0066AAA1 /* RegexTests.swift */; };
+		8116B0472472FBA80066AAA1 /* FirebaseAuthServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8116B0462472FBA80066AAA1 /* FirebaseAuthServiceMock.swift */; };
 		812990562471D8F000C046C7 /* FeedPlanViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812990552471D8F000C046C7 /* FeedPlanViewModel.swift */; };
 		812990582471DEEA00C046C7 /* FeedPlanContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812990572471DEEA00C046C7 /* FeedPlanContentView.swift */; };
 		8129905A2471E02300C046C7 /* FeedPlanTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812990592471E02300C046C7 /* FeedPlanTableViewCell.swift */; };
@@ -78,6 +79,7 @@
 		8116B036247238B80066AAA1 /* ProfileContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileContentView.swift; sourceTree = "<group>"; };
 		8116B03824723AB50066AAA1 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		8116B0432472EF0C0066AAA1 /* RegexTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegexTests.swift; sourceTree = "<group>"; };
+		8116B0462472FBA80066AAA1 /* FirebaseAuthServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAuthServiceMock.swift; sourceTree = "<group>"; };
 		812990552471D8F000C046C7 /* FeedPlanViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedPlanViewModel.swift; sourceTree = "<group>"; };
 		812990572471DEEA00C046C7 /* FeedPlanContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedPlanContentView.swift; sourceTree = "<group>"; };
 		812990592471E02300C046C7 /* FeedPlanTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedPlanTableViewCell.swift; sourceTree = "<group>"; };
@@ -343,6 +345,7 @@
 		8116B0412472EE890066AAA1 /* Firebase */ = {
 			isa = PBXGroup;
 			children = (
+				8116B0452472FAFE0066AAA1 /* Mock */,
 			);
 			path = Firebase;
 			sourceTree = "<group>";
@@ -353,6 +356,14 @@
 				8116B0432472EF0C0066AAA1 /* RegexTests.swift */,
 			);
 			path = Regex;
+			sourceTree = "<group>";
+		};
+		8116B0452472FAFE0066AAA1 /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				8116B0462472FBA80066AAA1 /* FirebaseAuthServiceMock.swift */,
+			);
+			path = Mock;
 			sourceTree = "<group>";
 		};
 		8152DE0524704F4B00BF85B2 /* Components */ = {
@@ -883,6 +894,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8116B0472472FBA80066AAA1 /* FirebaseAuthServiceMock.swift in Sources */,
 				81A28E832470332100975F8C /* VPlanTests.swift in Sources */,
 				8116B0442472EF0C0066AAA1 /* RegexTests.swift in Sources */,
 			);

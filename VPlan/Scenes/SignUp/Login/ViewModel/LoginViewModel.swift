@@ -15,7 +15,7 @@ struct LoginViewModel {
     let password = BehaviorRelay<String>(value: "")
     let firebaseService: CreatableAuthFirebaseService
     
-    let loginSucessedPublishSubject = PublishSubject<AuthDataResult>()
+    let loginSucessedPublishSubject = PublishSubject<Void>()
     let loginErrorSubject = PublishSubject<Error>()
       
     var isValid: Observable<Bool>
