@@ -19,6 +19,7 @@
 		8116B035247238AE0066AAA1 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8116B034247238AE0066AAA1 /* ProfileView.swift */; };
 		8116B037247238B80066AAA1 /* ProfileContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8116B036247238B80066AAA1 /* ProfileContentView.swift */; };
 		8116B03924723AB50066AAA1 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8116B03824723AB50066AAA1 /* ProfileViewModel.swift */; };
+		8116B0442472EF0C0066AAA1 /* RegexTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8116B0432472EF0C0066AAA1 /* RegexTests.swift */; };
 		812990562471D8F000C046C7 /* FeedPlanViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812990552471D8F000C046C7 /* FeedPlanViewModel.swift */; };
 		812990582471DEEA00C046C7 /* FeedPlanContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812990572471DEEA00C046C7 /* FeedPlanContentView.swift */; };
 		8129905A2471E02300C046C7 /* FeedPlanTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812990592471E02300C046C7 /* FeedPlanTableViewCell.swift */; };
@@ -76,6 +77,7 @@
 		8116B034247238AE0066AAA1 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		8116B036247238B80066AAA1 /* ProfileContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileContentView.swift; sourceTree = "<group>"; };
 		8116B03824723AB50066AAA1 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		8116B0432472EF0C0066AAA1 /* RegexTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegexTests.swift; sourceTree = "<group>"; };
 		812990552471D8F000C046C7 /* FeedPlanViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedPlanViewModel.swift; sourceTree = "<group>"; };
 		812990572471DEEA00C046C7 /* FeedPlanContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedPlanContentView.swift; sourceTree = "<group>"; };
 		812990592471E02300C046C7 /* FeedPlanTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedPlanTableViewCell.swift; sourceTree = "<group>"; };
@@ -290,6 +292,69 @@
 			path = CustomView;
 			sourceTree = "<group>";
 		};
+		8116B03A2472EDD20066AAA1 /* Commom */ = {
+			isa = PBXGroup;
+			children = (
+				8116B0422472EEA70066AAA1 /* Regex */,
+				8116B0412472EE890066AAA1 /* Firebase */,
+			);
+			path = Commom;
+			sourceTree = "<group>";
+		};
+		8116B03B2472EDE00066AAA1 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				8116B0402472EE770066AAA1 /* FeedPlan */,
+				8116B03F2472EE710066AAA1 /* CreatePlan */,
+				8116B03E2472EE6A0066AAA1 /* Login */,
+				8116B03D2472EE650066AAA1 /* Register */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		8116B03D2472EE650066AAA1 /* Register */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Register;
+			sourceTree = "<group>";
+		};
+		8116B03E2472EE6A0066AAA1 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		8116B03F2472EE710066AAA1 /* CreatePlan */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CreatePlan;
+			sourceTree = "<group>";
+		};
+		8116B0402472EE770066AAA1 /* FeedPlan */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = FeedPlan;
+			sourceTree = "<group>";
+		};
+		8116B0412472EE890066AAA1 /* Firebase */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Firebase;
+			sourceTree = "<group>";
+		};
+		8116B0422472EEA70066AAA1 /* Regex */ = {
+			isa = PBXGroup;
+			children = (
+				8116B0432472EF0C0066AAA1 /* RegexTests.swift */,
+			);
+			path = Regex;
+			sourceTree = "<group>";
+		};
 		8152DE0524704F4B00BF85B2 /* Components */ = {
 			isa = PBXGroup;
 			children = (
@@ -468,6 +533,8 @@
 		81A28E812470332100975F8C /* VPlanTests */ = {
 			isa = PBXGroup;
 			children = (
+				8116B03B2472EDE00066AAA1 /* Scenes */,
+				8116B03A2472EDD20066AAA1 /* Commom */,
 				81A28E822470332100975F8C /* VPlanTests.swift */,
 				81A28E842470332100975F8C /* Info.plist */,
 			);
@@ -817,6 +884,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				81A28E832470332100975F8C /* VPlanTests.swift in Sources */,
+				8116B0442472EF0C0066AAA1 /* RegexTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
